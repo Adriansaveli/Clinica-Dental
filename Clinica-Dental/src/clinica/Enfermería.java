@@ -35,9 +35,9 @@ public class Enfermería {
         this.Categoría = Categoría;
     }
 
-    public char Data () {
+    public String Data () {
         
-        return getCategoría();
+        return getCategoría() + "";
     }
 
     @Override
