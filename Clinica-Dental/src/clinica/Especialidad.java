@@ -56,5 +56,13 @@ public class Especialidad {
         
         return getNombre() + " | " + getIdentificador();
     }
+
+    @Override
+    public String toString() {
+        return "Especialidad{" + "Nombre=" + Nombre + ", Identificador=" + Identificador + '}';
+    }
+    
+    
+    
     
 }

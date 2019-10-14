@@ -81,4 +81,13 @@ public class Medicamento {
     public String Data () {
         return getIdentificador () + " | " + getNombre () + " | " + getPrincipioActivo () + " | " + getDosisMaxDiaria ();
     }
+
+    @Override
+    public String toString() {
+        return "Medicamento{" + "Identificador=" + Identificador + ", Nombre=" + Nombre + ", principioActivo=" + principioActivo + ", dosisMaxDiaria=" + dosisMaxDiaria + '}';
+    }
+    
+    
+    
 }
+

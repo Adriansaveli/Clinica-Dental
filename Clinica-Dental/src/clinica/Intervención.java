@@ -44,4 +44,13 @@ public class Intervención {
         
         return getDuración ();
     }
+
+    @Override
+    public String toString() {
+        return "Intervenci\u00f3n{" + "Duraci\u00f3n=" + Duración + '}';
+    }
+    
+    
+    
+    
 }

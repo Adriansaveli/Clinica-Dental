@@ -39,5 +39,13 @@ public class Enfermería {
         
         return getCategoría();
     }
+
+    @Override
+    public String toString() {
+        return "Enfermer\u00eda{" + "Categor\u00eda=" + Categoría + '}';
+    }
   
+    
+    
+    
 }
