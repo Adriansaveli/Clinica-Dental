@@ -6,12 +6,12 @@
 package clinica;
 
 /**
- *
+ * @version 2.0
  * @author AdrianSaveli
  */
-public class Revisión {
+public class Revision {
     private String anotaciones;
-    //Son las anotaciones que se escriben en la revisión.
+    //Son las anotaciones que se escriben en la revisión.Cadena de caracteres.
     
     //Getters y setters
     
@@ -23,14 +23,14 @@ public class Revisión {
         this.anotaciones = anotaciones;
     }
     //Constructor por defecto
-    public Revisión() {
+    public Revision() {
     }
     //Constructor con argumentos
-    public Revisión(String anotaciones) {
+    public Revision(String anotaciones) {
         this.anotaciones = anotaciones;
     }
     //Constructor de copia
-    public Revisión (Revisión p) {
+    public Revision (Revision p) {
         this.anotaciones = p.getAnotaciones();  
     }
     //Otros métodos sobreescritos

@@ -6,11 +6,11 @@
 package clinica;
 
 /**
- * 
+ * @version 2.0
  * @author AdrianSaveli
  */
 public class Secretariado {
-    private int añosExperiencia;//Son los años de experiencia del secretariado.Debe ser un número comprendido entre 0 y 60.
+    private int añosExperiencia;//Son los años de experiencia del secretariado.Debe ser un número determinado.
     
     //Getters y setters
     

@@ -6,12 +6,12 @@
 package clinica;
 
 /**
- *
+ * @version 2.0
  * @author AdrianSaveli
  */
 public class Informe {
     private String IdInforme;//Es el identificador del informe.
-    private String descripciónTratamiento;//Es la descripción del tratamiento a seguir del paciente.
+    private String descripciónTratamiento;//Es la descripción del tratamiento a seguir del paciente.Cadena de caracteres.
     
     //Getters y setters
     

@@ -6,16 +6,16 @@
 package clinica;
 
 /**
- *
+ * @version 2.0
  * @author AdrianSaveli
  */
 public class Paciente {
     private String IdPaciente;//Es el identificador del paciente.
-    private String nombre;//Es el nombre del paciente.
-    private String apellidos;//Es el apellido del paciente.
-    private String NIF;//Es la tarjeta de identidad del paciente.
-    private String telefono;//Es el telefono de contacto del paciente.
-    private String direccion;//Es la dirección de residencia del paciente.
+    private String nombre;//Es el nombre del paciente.Cadena de caracteres.
+    private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
+    private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
+    private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
+    private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
     
     //Getters y setters
 
