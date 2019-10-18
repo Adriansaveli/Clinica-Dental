@@ -32,7 +32,7 @@ public class Enfermeria {
     }
 
     public void setCategoria(char categoria) {
-        this.categoria = Categoria;
+        this.categoria = categoria;
     }
 
     public String Data () {

@@ -25,8 +25,8 @@ public class Especialidad {
     
   public Especialidad (Especialidad e){
       
-      this.nombre = e.getNombre;
-      this.idEspecialidad = e.getIdEspecialidad
+      this.nombre = e.getNombre();
+      this.idEspecialidad = e.getIdEspecialidad();
       
   }
 
