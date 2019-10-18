@@ -11,7 +11,7 @@ package clinica;
  */
 public class Revision {
     private String anotaciones;
-    //Son las anotaciones que se escriben en la revisión.
+    //Son las anotaciones que se escriben en la revisión.Cadena de caracteres.
     
     //Getters y setters
     

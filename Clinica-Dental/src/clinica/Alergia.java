@@ -11,7 +11,7 @@ package clinica;
  */
 public class Alergia {
     private String IdAlergia;//Es el identificador de las alergia.
-    private String nombreAlergía;//Es el nombre de la alergia.
+    private String nombreAlergía;//Es el nombre de la alergia.Cadena de caracteres.
     
     //Getters y setters
     
