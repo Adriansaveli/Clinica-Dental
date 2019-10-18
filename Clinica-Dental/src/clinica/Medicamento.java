@@ -5,61 +5,51 @@
  */
 
 /**
- *
+ * version 2
  * @author DAW109
  */
 public class Medicamento {
     
-    private int Identificador;
+    private int idMedicamento;
     //Identificador del medicamento. VALOR SUPERIOR A CERO
-    private String Nombre;
+    private String nombre;
     // Nombre del medicamento por ejemplo, aspirina... 
     private String principioActivo;
     // Principio activo del medicamento
     private float dosisMaxDiaria;
     // Dosis máxima diaria en mg puesto, por tanto tiene que ser un float porque no tiene que ser un numero entero, NO PUEDE SER VALOR 0
 
-    
-    //Contructor por defecto
-
     public Medicamento() {
     }
-    
-    //Contructor por parámetros
 
-    public Medicamento(int Identificador, String Nombre, String principioActivo, float dosisMaxDiaria) {
-        this.Identificador = Identificador;
-        this.Nombre = Nombre;
+    public Medicamento(int idMedicamento, String nombre, String principioActivo, float dosisMaxDiaria) {
+        this.idMedicamento = idMedicamento;
+        this.nombre = nombre;
         this.principioActivo = principioActivo;
         this.dosisMaxDiaria = dosisMaxDiaria;
     }
-    
-    //Constructor de copia
-    
-    public Medicamento (Medicamento m) {
-        
-        this.Identificador=m.getIdentificador();
-        this.Nombre=m.getNombre ();
-        this.principioActivo=m.getPrincipioActivo();
-        this.dosisMaxDiaria=m.getDosisMaxDiaria();
-       
-        
+
+    public Medicamento (Medicamento m){
+        this.idMedicamento = m.getIdMedicamento ();
+        this.nombre = m.getNombre();
+        this.principioActivo = m.getPrincipioActivo ();
+        this.dosisMaxDiaria = m.getDosisMaxDiaria ();
     }
 
-    public int getIdentificador() {
-        return Identificador;
+    public int getIdMedicamento() {
+        return idMedicamento;
     }
 
-    public void setIdentificador(int Identificador) {
-        this.Identificador = Identificador;
+    public void setIdMedicamento(int idMedicamento) {
+        this.idMedicamento = idMedicamento;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getPrincipioActivo() {
@@ -77,17 +67,14 @@ public class Medicamento {
     public void setDosisMaxDiaria(float dosisMaxDiaria) {
         this.dosisMaxDiaria = dosisMaxDiaria;
     }
-    
-    public String Data () {
-        return getIdentificador () + " | " + getNombre () + " | " + getPrincipioActivo () + " | " + getDosisMaxDiaria ();
-    }
 
     @Override
     public String toString() {
-        return "Medicamento{" + "Identificador=" + Identificador + ", Nombre=" + Nombre + ", principioActivo=" + principioActivo + ", dosisMaxDiaria=" + dosisMaxDiaria + '}';
+        return "Medicamento{" + "idMedicamento=" + idMedicamento + ", nombre=" + nombre + ", principioActivo=" + principioActivo + ", dosisMaxDiaria=" + dosisMaxDiaria + '}';
     }
     
-    
+    public String Data (){
+        return getIdMedicamento() + " | " + getNombre() + " | " + getPrincipioActivo() + " | " + getDosisMaxDiaria();
+    }
     
 }
-

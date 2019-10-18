@@ -5,63 +5,56 @@
  */
 
 /**
- *
+ * verison 2
  * @author DAW109
  */
 public class Especialidad {
     
-    private String Nombre;
+    private String nombre;
     //Nombre de la especialidad ej; endodoncista, esta relacionada con cirujía ES OBLIGATORIO TENER UNA CADENA DE CARACTERES
-    private String Identificador;
+    private String idEspecialidad;
     // Identificador de la especialidad, puede ser SA125 por eso es un String, NO PUEDE SER VALOR 0
-    
-    //Constructor por defecto 
 
     public Especialidad() {
     }
-    
-    //Constructor con parámetros
 
-    public Especialidad(String Nombre, String Identificador) {
-        this.Nombre = Nombre;
-        this.Identificador = Identificador;
+    public Especialidad(String nombre, String idEspecialidad) {
+        this.nombre = nombre;
+        this.idEspecialidad = idEspecialidad;
     }
     
-    //Constructor de copia
-    
-    public Especialidad (Especialidad e){
-        
-        this.Nombre=e.getNombre();
-        this.Identificador=e.getIdentificador();
-    }
+  public Especialidad (Especialidad e){
+      
+      this.nombre = e.getNombre;
+      this.idEspecialidad = e.getIdEspecialidad
+      
+  }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getIdentificador() {
-        return Identificador;
+    public String getIdEspecialidad() {
+        return idEspecialidad;
     }
 
-    public void setIdentificador(String Identificador) {
-        this.Identificador = Identificador;
-    }
-    
-    
-    public String Data (){
-        
-        return getNombre() + " | " + getIdentificador();
+    public void setIdEspecialidad(String idEspecialidad) {
+        this.idEspecialidad = idEspecialidad;
     }
 
     @Override
     public String toString() {
-        return "Especialidad{" + "Nombre=" + Nombre + ", Identificador=" + Identificador + '}';
+        return "Especialidad{" + "nombre=" + nombre + ", idEspecialidad=" + idEspecialidad + '}';
     }
     
+    public String Data(){
+        
+        return getNombre() + " | " + getIdEspecialidad();
+    }
     
     
     

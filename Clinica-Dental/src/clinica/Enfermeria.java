@@ -5,45 +5,47 @@
  */
 
 /**
- *
+ * version 2
  * @author DAW109
  */
-public class Enfermería {
+public class Enfermeria {
     
-    private char Categoría;
+    private char categoria;
     //Dado que la categoría tiene que estar solo representado por una letra es un char PUEDE TENER LOS VALORES QUE SE QUIERAN PUESTO QUE PUEDEN PONER LAS CATEGORÍAS COMO CATEGORÍA A,0, 1... SOLO PUEDE SER UN CARACTER.
 
     //Constructor por defecto
-    public Enfermería() {
+    public Enfermeria() {
     }
     //Constructor con parámetros
 
-    public Enfermería(char Categoría) {
-        this.Categoría = Categoría;
+    public Enfermeria(char categoria) {
+        this.categoria = categoria;
     }
     //Constructor de copia
     
-    public Enfermería (Enfermería e){
-        this.Categoría=e.getCategoría();
+    public Enfermeria (Enfermeria e){
+        this.categoria=e.getCategoria();
     }
 
-    public char getCategoría() {
-        return Categoría;
+    public char getCategoria() {
+        return categoria;
     }
 
-    public void setCategoría(char Categoría) {
-        this.Categoría = Categoría;
+    public void setCategoria(char categoria) {
+        this.categoria = Categoria;
     }
 
     public String Data () {
         
-        return getCategoría() + "";
+        return getCategoria() + "";
     }
 
     @Override
     public String toString() {
-        return "Enfermer\u00eda{" + "Categor\u00eda=" + Categoría + '}';
+        return "Enfermeria{" + "categoria=" + categoria + '}';
     }
+
+ 
   
     
     

@@ -5,59 +5,53 @@
  */
 
 /**
- *
+ * version 2
  * @author DAW109
  */
 public class Tratamiento {
  
     
-    private String Identificador;
+    private String idTratamiento;
     //Identificador del tratamiento relacionado con el paciente TIENE QUE TENER VALOR MAYOR A CERO
-    private String Nombre;
+    private String nombre;
     //Nombre del tratamiento Ej; Endodoncia... 
     private String fechaInicio;
     //Fecha de inicio del tratamiento pueden ser tratamientos de semanas... TIENE QUE TENER FORMATO DIA/MES/AÑO
-    private boolean Consentimiento;
+    private boolean consentimiento;
     // Consentimiento del paciente al ser solo acepto o no se pone un boolean, OLO SE ACEPTAN VALORES DE VERDADERO (ACEPTA Y FALSO (NO ACEPTA)
-    
-    //Constructor por defecto
 
     public Tratamiento() {
     }
-    
-    // Constructor con parámetros
 
-    public Tratamiento(String Identificador, String Nombre, String fechaInicio, boolean Consentimiento) {
-        this.Identificador = Identificador;
-        this.Nombre = Nombre;
+    public Tratamiento(String idTratamiento, String nombre, String fechaInicio, boolean consentimiento) {
+        this.idTratamiento = idTratamiento;
+        this.nombre = nombre;
         this.fechaInicio = fechaInicio;
-        this.Consentimiento = Consentimiento;
+        this.consentimiento = consentimiento;
     }
-    
-    //Constructor de copia
     
     public Tratamiento (Tratamiento t) {
-        
-        this.Identificador= t.getIdentificador();
-        this.Nombre=t.getNombre();
-        this.Consentimiento=t.isConsentimiento();
-        this.fechaInicio=t.getFechaInicio();
+        this.idTratamiento = t.getIdTratamiento ();
+        this.nombre = t.getNombre();
+        this.fechaInicio = t.getFechaInicio();
+        this.consentimiento = t.isConsentimiento();
+       
     }
 
-    public String getIdentificador() {
-        return Identificador;
+    public String getIdTratamiento() {
+        return idTratamiento;
     }
 
-    public void setIdentificador(String Identificador) {
-        this.Identificador = Identificador;
+    public void setIdTratamiento(String idTratamiento) {
+        this.idTratamiento = idTratamiento;
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getFechaInicio() {
@@ -69,24 +63,22 @@ public class Tratamiento {
     }
 
     public boolean isConsentimiento() {
-        return Consentimiento;
+        return consentimiento;
     }
 
-    public void setConsentimiento(boolean Consentimiento) {
-        this.Consentimiento = Consentimiento;
+    public void setConsentimiento(boolean consentimiento) {
+        this.consentimiento = consentimiento;
     }
 
     @Override
     public String toString() {
-        return "Tratamiento{" + "Identificador=" + Identificador + ", Nombre=" + Nombre + ", fechaInicio=" + fechaInicio + ", Consentimiento=" + Consentimiento + '}';
+        return "Tratamiento{" + "idTratamiento=" + idTratamiento + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", consentimiento=" + consentimiento + '}';
     }
-    
-    public String Data () {
-        
-        return getIdentificador ()+ " | " + getNombre () + " | " + getFechaInicio () + " | " + isConsentimiento ();
-        
-    }
-    
+     
+ public String Data (){
+     return getIdTratamiento() + " | " + getNombre() + " | " + getFechaInicio() + " | " + isConsentimiento ();
+ }
+
     
 }
 
