@@ -26,8 +26,8 @@ public class Historial {
     }
     
     public Historial(Historial h){
-        this.descripcion=h.descripcion;
-        this.idHistoria=h.idHistoria;
+        this.descripcion=h.getDescripcion();
+        this.idHistoria=h.getIdHistoria();
     }
 
     public int getIdHistoria() {

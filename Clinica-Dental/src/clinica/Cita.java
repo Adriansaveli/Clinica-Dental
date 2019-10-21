@@ -25,10 +25,10 @@ public class Cita {
     }
     
     public Cita(Cita c) {
-        this.idCita=c.idCita;
-        this.fecha=c.fecha;
-        this.rangoHorario=c.rangoHorario;
-        this.hora=c.hora;
+        this.idCita=c.getIdCita();
+        this.fecha=c.getFecha();
+        this.rangoHorario=c.getRangoHorario();
+        this.hora=c.getHora();
     }
 
     public int getIdCita() {

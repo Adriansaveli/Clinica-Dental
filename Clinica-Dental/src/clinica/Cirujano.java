@@ -22,7 +22,7 @@ public class Cirujano {
     
     public Cirujano(Cirujano c) {
         
-        this.especialidades=c.especialidades;
+        this.especialidades=c.getEspecialidades();
     }
     /*
     Getter de especialidades.

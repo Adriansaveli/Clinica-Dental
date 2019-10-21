@@ -26,8 +26,8 @@ public class Cobro {
     
     public Cobro(Cobro c) {
         this.idCobro=c.idCobro;
-        this.importeTotalEuros=c.importeTotalEuros;
-        this.fechaFinalizacion=c.fechaFinalizacion;
+        this.importeTotalEuros=c.getImporteTotalEuros();
+        this.fechaFinalizacion=c.getFechaFinalizacion();
     }
 
     public int getIdCobro() {

@@ -31,12 +31,12 @@ public class Empleado{
     }
     
     public Empleado(Empleado e) {
-        this.idEmpleado=e.idEmpleado;
-        this.nombre=e.nombre;
-        this.apellido=e.apellido;
-        this.telefono=e.telefono;
-        this.nif=e.nif;
-        this.direccion=e.direccion;
+        this.idEmpleado=e.getIdEmpleado();
+        this.nombre=e.getNombre();
+        this.apellido=e.getApellido();
+        this.telefono=e.getTelefono();
+        this.nif=e.getNif();
+        this.direccion=e.getDireccion();
         
     }
 
