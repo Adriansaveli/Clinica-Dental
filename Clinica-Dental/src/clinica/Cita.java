@@ -5,14 +5,15 @@
  */
 package clinica;
 /**
- * @version 1.0
- * @author Alberto
+ * @version 2.0
+ * @author Mar Santín
  */
 public class Cita {
     private int idCita;
     private String fecha;
     private char rangoHorario;
     private String hora;
+    private boolean estado;
 
     public Cita() {
     }

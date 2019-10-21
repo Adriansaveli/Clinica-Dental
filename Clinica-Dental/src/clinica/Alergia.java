@@ -6,7 +6,7 @@
 package clinica;
 
 /**
- * @version 2.0
+ * @version 3.0
  * @author AdrianSaveli
  */
 public class Alergia {
@@ -49,6 +49,6 @@ public class Alergia {
         return "Alerg\u00eda{" + "ID=" + IdAlergia + ", nombreAlerg\u00eda=" + nombreAlergía + '}';
     }
      public String data() {
-        return ""+getID()+"l"+getNombreAlergia();
+        return ""+getID()+"|"+getNombreAlergia();
     }
 }

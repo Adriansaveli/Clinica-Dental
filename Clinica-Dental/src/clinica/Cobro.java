@@ -6,8 +6,8 @@
 package clinica;
 
 /**
- * @version 1.0
- * @author DAW106
+ * @version 2.0
+ * @author DAW109
  */
 public class Cobro {
     

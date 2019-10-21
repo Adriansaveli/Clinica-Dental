@@ -6,13 +6,13 @@
 package clinica;
 
 /**
- * @version 2.0
+ * @version 3.0
  * @author AdrianSaveli
  */
 public class Pago {
     private String IdPago;//Es el identificador del pago.
     private String fechaDePago;//Es la fecha de la realización del pago por parte del paciente.
-    private int importe ;//Es el importe del pago.Solo son valores númericos.
+    private double importe ;//Es el importe del pago.Solo son valores númericos.
     private String métodoDePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
    
     //Getters y setters
@@ -34,7 +34,7 @@ public class Pago {
     }
 
     public int getImporte() {
-        return importe;
+        return (int) importe;
     }
 
     public void setImporte(int importe) {

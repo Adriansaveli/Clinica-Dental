@@ -6,7 +6,7 @@
 package clinica;
 
 /**
- * @version 2.0
+ * @version 4.0
  * @author AdrianSaveli
  */
 public class Paciente {
@@ -98,6 +98,6 @@ public class Paciente {
     }
     
     public String data() {
-        return ""+getID()+"l"+getNombre()+"l"+getApellidos()+"l"+getNIF()+"l"+getTelefono()+"l"+getDireccion();
+        return ""+getID()+"|"+getNombre()+"|"+getApellidos()+"|"+getNIF()+"|"+getTelefono()+"|"+getDireccion();
     }
 }

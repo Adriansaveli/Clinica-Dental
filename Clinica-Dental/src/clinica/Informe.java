@@ -6,8 +6,8 @@
 package clinica;
 
 /**
- * @version 2.0
- * @author AdrianSaveli
+ * @version 4.0
+ * @author Mar Santín
  */
 public class Informe {
     private String idInforme;//Es el identificador del informe.
@@ -50,7 +50,7 @@ public class Informe {
     }
     
      public String data() {
-        return ""+getID()+"l"+getDescripciónTratamiento();
+        return ""+getID()+"|"+getDescripciónTratamiento();
     }
     
 }

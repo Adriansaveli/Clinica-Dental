@@ -5,7 +5,7 @@
  */
 
 /**
- * version 2
+ * version 3.0
  * @author DAW109
  */
 public class Medicamento {
@@ -16,13 +16,13 @@ public class Medicamento {
     // Nombre del medicamento por ejemplo, aspirina... 
     private String principioActivo;
     // Principio activo del medicamento
-    private float dosisMaxDiaria;
-    // Dosis máxima diaria en mg puesto, por tanto tiene que ser un float porque no tiene que ser un numero entero, NO PUEDE SER VALOR 0
+    private int dosisMaxDiaria;
+    // Dosis máxima diaria en mg puesto, por tanto tiene que ser un int porque debe ser un numero entero, NO PUEDE SER VALOR 0
 
     public Medicamento() {
     }
 
-    public Medicamento(int idMedicamento, String nombre, String principioActivo, float dosisMaxDiaria) {
+    public Medicamento(int idMedicamento, String nombre, String principioActivo, int dosisMaxDiaria) {
         this.idMedicamento = idMedicamento;
         this.nombre = nombre;
         this.principioActivo = principioActivo;
@@ -30,10 +30,10 @@ public class Medicamento {
     }
 
     public Medicamento (Medicamento m){
-        this.idMedicamento = m.getIdMedicamento ();
+        this.idMedicamento = m.getIdMedicamento();
         this.nombre = m.getNombre();
         this.principioActivo = m.getPrincipioActivo ();
-        this.dosisMaxDiaria = m.getDosisMaxDiaria ();
+        this.dosisMaxDiaria= (int) m.getDosisMaxDiaria();
     }
 
     public int getIdMedicamento() {
@@ -64,7 +64,7 @@ public class Medicamento {
         return dosisMaxDiaria;
     }
 
-    public void setDosisMaxDiaria(float dosisMaxDiaria) {
+    public void setDosisMaxDiaria(int dosisMaxDiaria) {
         this.dosisMaxDiaria = dosisMaxDiaria;
     }
 

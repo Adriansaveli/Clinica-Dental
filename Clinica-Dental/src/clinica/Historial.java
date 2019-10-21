@@ -7,8 +7,8 @@
 package clinica;
 //import java.util.*;
 /**
- * @version 1.0
- * @author DAW106
+ * @version 2.0
+ * @author DAW109
  * Clase del Historial de la clinica
  */
 public class Historial {
