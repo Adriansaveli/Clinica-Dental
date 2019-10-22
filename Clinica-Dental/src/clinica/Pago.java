@@ -75,6 +75,6 @@ public class Pago {
     }
     
     public String data() {
-        return ""+getID()+"l"+getFechaDePago()+"l"+getImporte()+"l"+getMétodoDePago();
+        return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMétodoDePago();
     }
 }
