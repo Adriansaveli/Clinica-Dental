@@ -10,18 +10,18 @@ package clinica;
  * @author AdrianSaveli
  */
 public class Pago {
-    private String IdPago;//Es el identificador del pago.
+    private long IdPago;//Es el identificador del pago.
     private String fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
     private String métodoDePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
    
     //Getters y setters
     
-    public String getID() {
+    public long getID() {
         return IdPago;
     }
 
-    public void setID(String ID) {
+    public void setID(long ID) {
         this.IdPago = ID;
     }
 
@@ -53,7 +53,7 @@ public class Pago {
     public Pago() {
     }
     //Constructor con argumentos
-    public Pago(String ID, String FechaDePago, int Importe, String MétodoDePago) {
+    public Pago(long ID, String FechaDePago, int Importe, String MétodoDePago) {
         this.IdPago = ID;
         this.fechadePago = FechaDePago;
         this.importe = Importe;
