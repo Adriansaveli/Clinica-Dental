@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.Date;
 /**
  * @version 3.1
  * @author AdrianSaveli
  */
 public class Pago {
     private long IdPago;//Es el identificador del pago.
-    private String fechadePago;//Es la fecha de la realización del pago por parte del paciente.
+    private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
-    private String métodoDePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
+    private String métododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
    
     //Getters y setters
     
@@ -25,11 +25,11 @@ public class Pago {
         this.IdPago = ID;
     }
 
-    public String getFechaDePago() {
+    public Date getFechaDePago() {
         return fechadePago;
     }
 
-    public void setFechaDePago(String fechaDePago) {
+    public void setFechaDePago(Date fechaDePago) {
         this.fechadePago = fechaDePago;
     }
 
@@ -42,36 +42,36 @@ public class Pago {
     }
 
     public String getMétodoDePago() {
-        return métodoDePago;
+        return métododePago;
     }
 
     public void setMétodoDePago(String métodoDePago) {
-        this.métodoDePago = métodoDePago;
+        this.métododePago = métodoDePago;
     }
 
    //Constructor por defecto
     public Pago() {
     }
     //Constructor con argumentos
-    public Pago(long ID, String FechaDePago, int Importe, String MétodoDePago) {
+    public Pago(long ID, Date FechaDePago, int Importe, String MétodoDePago) {
         this.IdPago = ID;
         this.fechadePago = FechaDePago;
         this.importe = Importe;
-        this.métodoDePago = MétodoDePago;
+        this.métododePago = MétodoDePago;
     }
     //Constructor de copia
       public Pago (Pago p) {
         this.IdPago = p.getID();
         this.fechadePago = p.getFechaDePago();
         this.importe = p.getImporte();
-        this.métodoDePago = p.getMétodoDePago();
+        this.métododePago = p.getMétodoDePago();
         
         
         }
 
     @Override
     public String toString() {
-        return "Pago{" + "ID=" + IdPago + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métodoDePago + '}';
+        return "Pago{" + "ID=" + IdPago + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métododePago + '}';
     }
     
     public String data() {
