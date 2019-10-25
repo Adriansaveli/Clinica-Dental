@@ -6,20 +6,20 @@
 package clinica;
 
 /**
- * @version 4.0
- * @author Mar Santín
+ * @version 4.1
+ * @author AdrianSaveli
  */
 public class Informe {
-    private String idInforme;//Es el identificador del informe.
+    private long idInforme;//Es el identificador del informe.
     private String descripciónTratamiento;//Es la descripción del tratamiento a seguir del paciente.Cadena de caracteres.
     
     //Getters y setters
     
-    public String getID() {
+    public long getID() {
         return idInforme;
     }
 
-    public void setID(String ID) {
+    public void setID(long ID) {
         this.idInforme = ID;
     }
 
@@ -34,7 +34,7 @@ public class Informe {
     public Informe() {
     }
     //Constructor con argumentos
-    public Informe(String ID, String descripciónTratamiento) {
+    public Informe(long ID, String descripciónTratamiento) {
         this.idInforme = ID;
         this.descripciónTratamiento = descripciónTratamiento;
     }

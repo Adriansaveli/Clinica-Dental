@@ -6,7 +6,7 @@
 package clinica;
 
 /**
- * @version 3.0
+ * @version 3.1
  * @author AdrianSaveli
  */
 public class Pago {
