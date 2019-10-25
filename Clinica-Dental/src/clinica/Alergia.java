@@ -10,17 +10,17 @@ package clinica;
  * @author AdrianSaveli
  */
 public class Alergia {
-    private String IdAlergia;//Es el identificador de las alergia.
+    private long idAlergia;//Es el identificador de las alergia.
     private String nombreAlergía;//Es el nombre de la alergia.Cadena de caracteres.
     
     //Getters y setters
     
-    public String getID() {
-        return IdAlergia;
+    public long getID() {
+        return idAlergia;
     }
 
-    public void setID(String ID) {
-        this.IdAlergia = ID;
+    public void setID(long ID) {
+        this.idAlergia = ID;
     }
 
     public String getNombreAlergia() {
@@ -34,19 +34,19 @@ public class Alergia {
     public Alergia() {
     }
     //Constructor con argumentos
-    public Alergia(String ID, String nombreAlergía) {
-        this.IdAlergia = ID;
+    public Alergia(long ID, String nombreAlergía) {
+        this.idAlergia = ID;
         this.nombreAlergía = nombreAlergía;
     }
     //Constructor de copia
     public Alergia (Alergia p) {
         this.nombreAlergía = p.getNombreAlergia();
-        this.IdAlergia = p.getID();
+        this.idAlergia = p.getID();
     }
     //Otros métodos sobreescritos
     @Override
     public String toString() {
-        return "Alerg\u00eda{" + "ID=" + IdAlergia + ", nombreAlerg\u00eda=" + nombreAlergía + '}';
+        return "Alerg\u00eda{" + "ID=" + idAlergia + ", nombreAlerg\u00eda=" + nombreAlergía + '}';
     }
      public String data() {
         return ""+getID()+"|"+getNombreAlergia();
