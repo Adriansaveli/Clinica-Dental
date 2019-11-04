@@ -21,8 +21,8 @@ public class Clinica {
         
         Historial h1=new Historial(7,"Paciente"); //Se crea el objeto historial h1
         Empleado e1=new Empleado(1,"Jose","Sanchez","938298","239883-A","Calle Heliodoro 123");
-        Cobro c1=new Cobro(3,50.0,"13/04/2007");
-        Cita ci1=new Cita(1,"12/04/2005",'T',"09:34");
+        //Cobro c1=new Cobro(3,50.0,"13/04/2007");
+        //Cita ci1=new Cita(1,"12/04/2005",'T',"09:34");
         Cirujano cir1=new Cirujano("especialidades");
         
         System.out.println("*****HISTORIAL DEL PACIENTE*****");
@@ -34,11 +34,11 @@ public class Clinica {
         System.out.println(e1.data());
         System.out.println(e1.toString());
         
-        System.out.println(c1.data());
-        System.out.println(c1.toString());
+        //System.out.println(c1.data());
+        //System.out.println(c1.toString());
         
-        System.out.println(ci1.data());
-        System.out.println(ci1.toString());
+        //System.out.println(ci1.data());
+        //System.out.println(ci1.toString());
         
         System.out.println(cir1.data());
         System.out.println(cir1.toString());

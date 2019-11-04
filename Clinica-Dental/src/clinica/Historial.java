@@ -13,7 +13,7 @@ package clinica;
  */
 public class Historial {
     
-    protected long idHistoria;//Lleva el identificador del historial
+    protected long id;//Lleva el identificador del historial
     private String descripcion;//Descripcion del historial
   //private List<Alergia>alergias=new ArrayList<Alergia>();
 
@@ -21,21 +21,21 @@ public class Historial {
     }
 
     public Historial(int idHistoria, String descripcion) {
-        this.idHistoria = idHistoria;
+        this.id = idHistoria;
         this.descripcion = descripcion;
     }
     
     public Historial(Historial h){
         this.descripcion=h.getDescripcion();
-        this.idHistoria=h.getIdHistoria();
+        this.id=h.getIdHistoria();
     }
 
     public long getIdHistoria() {
-        return idHistoria;
+        return id;
     }
 
     public void setIdHistoria(int idHistoria) {
-        this.idHistoria = idHistoria;
+        this.id = idHistoria;
     }
 
     public String getDescripcion() {
@@ -48,7 +48,7 @@ public class Historial {
 
     @Override
     public String toString() {
-        return "Historial{" + "idHistoria=" + idHistoria + ", descripcion=" + descripcion + '}';
+        return "Historial{" + "idHistoria=" + id + ", descripcion=" + descripcion + '}';
     }
     
     public String data() {

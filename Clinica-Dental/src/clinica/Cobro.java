@@ -4,38 +4,38 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.Date;
 /**
  * @version 2.0
  * @author DAW109
  */
 public class Cobro {
     
-    private int idCobro;
+    protected long id;
     private double importeTotalEuros;
-    private String fechaFinalizacion;
+    private Date fechaFinalizacion;
 
     public Cobro() {
     }
 
-    public Cobro(int idCobro, double importeTotalEuros, String fechaFinalizacion) {
-        this.idCobro = idCobro;
+    public Cobro(int idCobro, double importeTotalEuros, Date fechaFinalizacion) {
+        this.id = idCobro;
         this.importeTotalEuros = importeTotalEuros;
         this.fechaFinalizacion = fechaFinalizacion;
     }
     
     public Cobro(Cobro c) {
-        this.idCobro=c.idCobro;
+        this.id=c.id;
         this.importeTotalEuros=c.getImporteTotalEuros();
         this.fechaFinalizacion=c.getFechaFinalizacion();
     }
 
-    public int getIdCobro() {
-        return idCobro;
+    public long getIdCobro() {
+        return id;
     }
 
     public void setIdCobro(int idCobro) {
-        this.idCobro = idCobro;
+        this.id = idCobro;
     }
 
     public double getImporteTotalEuros() {
@@ -46,17 +46,17 @@ public class Cobro {
         this.importeTotalEuros = importeTotalEuros;
     }
 
-    public String getFechaFinalizacion() {
+    public Date getFechaFinalizacion() {
         return fechaFinalizacion;
     }
 
-    public void setFechaFinalizacion(String fechaFinalizacion) {
+    public void setFechaFinalizacion(Date fechaFinalizacion) {
         this.fechaFinalizacion = fechaFinalizacion;
     }
 
     @Override
     public String toString() {
-        return "Cobro{" + "idCobro=" + idCobro + ", importeTotalEuros=" + importeTotalEuros + ", fechaFinalizacion=" + fechaFinalizacion + '}';
+        return "Cobro{" + "idCobro=" + id + ", importeTotalEuros=" + importeTotalEuros + ", fechaFinalizacion=" + fechaFinalizacion + '}';
     }
     
     public String data() {
