@@ -10,21 +10,22 @@ package clinica;
  * @author AdrianSaveli
  */
 public class Paciente {
-    protected String Id;//Es el identificador del paciente.
+    protected long idPaciente;//Es el identificador del paciente.
     private String nombre;//Es el nombre del paciente.Cadena de caracteres.
     private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
     private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
     private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
+    private String Id;
     
     //Getters y setters
 
-    public String getID() {
-        return Id;
+    public long getID() {
+        return idPaciente;
     }
 
-    public void setID(String ID) {
-        this.Id = ID;
+    public void setID(long idPaciente) {
+        this.idPaciente = idPaciente;
     }
     
     
@@ -72,8 +73,8 @@ public class Paciente {
     }
     //Constructor con argumentos
 
-    public Paciente(String ID, String nombre, String apellidos, String NIF, String telefono, String direccion) {
-        this.Id = ID;
+    public Paciente(long idPaciente, String nombre, String apellidos, String NIF, String telefono, String direccion) {
+        this.idPaciente = idPaciente;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.NIF = NIF;
@@ -83,7 +84,7 @@ public class Paciente {
    
     //Constructor de copia
    public Paciente (Paciente p) {
-        this.Id = p.getID();
+        this.Id = p.getIdPaciente();
         this.nombre = p.getNombre();
         this.apellidos = p.getApellidos();
         this.NIF = p.getNIF();
@@ -99,5 +100,9 @@ public class Paciente {
     
     public String data() {
         return ""+getID()+"|"+getNombre()+"|"+getApellidos()+"|"+getNIF()+"|"+getTelefono()+"|"+getDireccion();
+    }
+
+    private String getIdPaciente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

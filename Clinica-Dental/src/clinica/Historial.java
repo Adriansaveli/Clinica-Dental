@@ -13,7 +13,7 @@ package clinica;
  */
 public class Historial {
     
-    private int idHistoria;//Lleva el identificador del historial
+    protected long idHistoria;//Lleva el identificador del historial
     private String descripcion;//Descripcion del historial
   //private List<Alergia>alergias=new ArrayList<Alergia>();
 
@@ -30,7 +30,7 @@ public class Historial {
         this.idHistoria=h.getIdHistoria();
     }
 
-    public int getIdHistoria() {
+    public long getIdHistoria() {
         return idHistoria;
     }
 

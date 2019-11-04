@@ -11,7 +11,7 @@
 public class Tratamiento {
  
     
-    private String idTratamiento;
+    protected long idTratamiento;
     //Identificador del tratamiento relacionado con el paciente TIENE QUE TENER VALOR MAYOR A CERO
     private String nombre;
     //Nombre del tratamiento Ej; Endodoncia... 
@@ -23,7 +23,7 @@ public class Tratamiento {
     public Tratamiento() {
     }
 
-    public Tratamiento(String idTratamiento, String nombre, String fechaInicio, boolean consentimiento) {
+    public Tratamiento(long idTratamiento, String nombre, String fechaInicio, boolean consentimiento) {
         this.idTratamiento = idTratamiento;
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
@@ -38,11 +38,15 @@ public class Tratamiento {
        
     }
 
-    public String getIdTratamiento() {
+    public long getIdTratamiento() {
         return idTratamiento;
     }
 
-    public void setIdTratamiento(String idTratamiento) {
+    /**
+     *
+     * @param idTratamiento
+     */
+    public void setIdTratamiento(long idTratamiento) {
         this.idTratamiento = idTratamiento;
     }
 

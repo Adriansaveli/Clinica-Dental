@@ -12,13 +12,13 @@ public class Especialidad {
     
     private String nombre;
     //Nombre de la especialidad ej; endodoncista, esta relacionada con cirujía ES OBLIGATORIO TENER UNA CADENA DE CARACTERES
-    private String idEspecialidad;
+    protected long idEspecialidad;
     // Identificador de la especialidad, puede ser SA125 por eso es un String, NO PUEDE SER VALOR 0
 
     public Especialidad() {
     }
 
-    public Especialidad(String nombre, String idEspecialidad) {
+    public Especialidad(String nombre, long idEspecialidad) {
         this.nombre = nombre;
         this.idEspecialidad = idEspecialidad;
     }
@@ -38,11 +38,15 @@ public class Especialidad {
         this.nombre = nombre;
     }
 
-    public String getIdEspecialidad() {
+    public long getIdEspecialidad() {
         return idEspecialidad;
     }
 
-    public void setIdEspecialidad(String idEspecialidad) {
+    /**
+     *
+     * @param idEspecialidad
+     */
+    public void setIdEspecialidad(long idEspecialidad) {
         this.idEspecialidad = idEspecialidad;
     }
 
