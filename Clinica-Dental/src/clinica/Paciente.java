@@ -10,7 +10,7 @@ package clinica;
  * @author AdrianSaveli
  */
 public class Paciente {
-    private String IdPaciente;//Es el identificador del paciente.
+    protected String Id;//Es el identificador del paciente.
     private String nombre;//Es el nombre del paciente.Cadena de caracteres.
     private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
@@ -20,11 +20,11 @@ public class Paciente {
     //Getters y setters
 
     public String getID() {
-        return IdPaciente;
+        return Id;
     }
 
     public void setID(String ID) {
-        this.IdPaciente = ID;
+        this.Id = ID;
     }
     
     
@@ -73,7 +73,7 @@ public class Paciente {
     //Constructor con argumentos
 
     public Paciente(String ID, String nombre, String apellidos, String NIF, String telefono, String direccion) {
-        this.IdPaciente = ID;
+        this.Id = ID;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.NIF = NIF;
@@ -83,7 +83,7 @@ public class Paciente {
    
     //Constructor de copia
    public Paciente (Paciente p) {
-        this.IdPaciente = p.getID();
+        this.Id = p.getID();
         this.nombre = p.getNombre();
         this.apellidos = p.getApellidos();
         this.NIF = p.getNIF();
@@ -94,7 +94,7 @@ public class Paciente {
     
     @Override
     public String toString() {
-        return "Paciente{" + "ID=" + IdPaciente + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", telefono=" + telefono + ", direccion=" + direccion + '}';
+        return "Paciente{" + "ID=" + Id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", telefono=" + telefono + ", direccion=" + direccion + '}';
     }
     
     public String data() {
