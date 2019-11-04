@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package clinica;
 /**
  * verison 2
  * @author DAW109
@@ -12,7 +12,7 @@ public class Especialidad {
     
     private String nombre;
     //Nombre de la especialidad ej; endodoncista, esta relacionada con cirujía ES OBLIGATORIO TENER UNA CADENA DE CARACTERES
-    protected long idEspecialidad;
+    protected long id;
     // Identificador de la especialidad, puede ser SA125 por eso es un String, NO PUEDE SER VALOR 0
 
     public Especialidad() {
@@ -20,13 +20,13 @@ public class Especialidad {
 
     public Especialidad(String nombre, long idEspecialidad) {
         this.nombre = nombre;
-        this.idEspecialidad = idEspecialidad;
+        this.id = idEspecialidad;
     }
     
   public Especialidad (Especialidad e){
       
       this.nombre = e.getNombre();
-      this.idEspecialidad = e.getIdEspecialidad();
+      this.id = e.getId();
       
   }
 
@@ -38,26 +38,26 @@ public class Especialidad {
         this.nombre = nombre;
     }
 
-    public long getIdEspecialidad() {
-        return idEspecialidad;
+    public long getId() {
+        return id;
     }
 
     /**
      *
-     * @param idEspecialidad
+     * @param id
      */
-    public void setIdEspecialidad(long idEspecialidad) {
-        this.idEspecialidad = idEspecialidad;
+    public void setId(long id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
-        return "Especialidad{" + "nombre=" + nombre + ", idEspecialidad=" + idEspecialidad + '}';
+        return "Especialidad{" + "nombre=" + nombre + ", idEspecialidad=" + id + '}';
     }
     
     public String Data(){
         
-        return getNombre() + " | " + getIdEspecialidad();
+        return getNombre() + " | " + getId();
     }
     
     

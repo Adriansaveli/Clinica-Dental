@@ -27,10 +27,10 @@ public class Historial {
     
     public Historial(Historial h){
         this.descripcion=h.getDescripcion();
-        this.id=h.getIdHistoria();
+        this.id=h.getId();
     }
 
-    public long getIdHistoria() {
+    public long getId() {
         return id;
     }
 
@@ -52,7 +52,7 @@ public class Historial {
     }
     
     public String data() {
-        return getIdHistoria() + " | " + getDescripcion();
+        return getId() + " | " + getDescripcion();
     }
 }
 

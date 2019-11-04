@@ -31,7 +31,9 @@ public class Empleado{
     }
     
     public Empleado(Empleado e) {
-        this.id=e.getIdEmpleado();
+
+        this.id=e.getId();
+
         this.nombre=e.getNombre();
         this.apellido=e.getApellido();
         this.telefono=e.getTelefono();
@@ -40,12 +42,16 @@ public class Empleado{
         
     }
 
-    public long getIdEmpleado() {
+
+    public long getId() {
+
         return id;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
-        this.id = idEmpleado;
+
+    public void setId(int id) {
+        this.id = id;
+
     }
 
     public String getNombre() {
@@ -95,7 +101,7 @@ public class Empleado{
     
     public String data() {
       
-        return getIdEmpleado() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
+        return getId() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
     }
     
 }

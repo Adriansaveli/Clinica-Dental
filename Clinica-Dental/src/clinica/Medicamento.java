@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package clinica;
 /**
  * version 3.0
  * @author DAW109
  */
 public class Medicamento {
     
-    private int idMedicamento;
+    protected long id;
     //Identificador del medicamento. VALOR SUPERIOR A CERO
     private String nombre;
     // Nombre del medicamento por ejemplo, aspirina... 
@@ -23,25 +23,25 @@ public class Medicamento {
     }
 
     public Medicamento(int idMedicamento, String nombre, String principioActivo, int dosisMaxDiaria) {
-        this.idMedicamento = idMedicamento;
+        this.id = idMedicamento;
         this.nombre = nombre;
         this.principioActivo = principioActivo;
         this.dosisMaxDiaria = dosisMaxDiaria;
     }
 
     public Medicamento (Medicamento m){
-        this.idMedicamento = m.getIdMedicamento();
+        this.id = m.getId();
         this.nombre = m.getNombre();
         this.principioActivo = m.getPrincipioActivo ();
         this.dosisMaxDiaria= (int) m.getDosisMaxDiaria();
     }
 
-    public int getIdMedicamento() {
-        return idMedicamento;
+    public long getId() {
+        return id;
     }
 
-    public void setIdMedicamento(int idMedicamento) {
-        this.idMedicamento = idMedicamento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -70,11 +70,11 @@ public class Medicamento {
 
     @Override
     public String toString() {
-        return "Medicamento{" + "idMedicamento=" + idMedicamento + ", nombre=" + nombre + ", principioActivo=" + principioActivo + ", dosisMaxDiaria=" + dosisMaxDiaria + '}';
+        return "Medicamento{" + "idMedicamento=" + id + ", nombre=" + nombre + ", principioActivo=" + principioActivo + ", dosisMaxDiaria=" + dosisMaxDiaria + '}';
     }
     
     public String Data (){
-        return getIdMedicamento() + " | " + getNombre() + " | " + getPrincipioActivo() + " | " + getDosisMaxDiaria();
+        return getId() + " | " + getNombre() + " | " + getPrincipioActivo() + " | " + getDosisMaxDiaria();
     }
     
 }
