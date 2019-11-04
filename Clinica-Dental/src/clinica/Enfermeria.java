@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package clinica;
 /**
  * version 2
  * @author DAW109

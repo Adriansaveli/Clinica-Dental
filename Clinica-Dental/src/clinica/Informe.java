@@ -11,7 +11,7 @@ package clinica;
  */
 public class Informe {
     protected long id;//Es el identificador del informe.
-    private String descripciónTratamiento;//Es la descripción del tratamiento a seguir del paciente.Cadena de caracteres.
+    private String descripcionTratamiento;//Es la descripción del tratamiento a seguir del paciente.Cadena de caracteres.
     
     //Getters y setters
     
@@ -24,11 +24,11 @@ public class Informe {
     }
 
     public String getDescripciónTratamiento() {
-        return descripciónTratamiento;
+        return descripcionTratamiento;
     }
 
     public void setDescripciónTratamiento(String descripciónTratamiento) {
-        this.descripciónTratamiento = descripciónTratamiento;
+        this.descripcionTratamiento = descripciónTratamiento;
     }
     //Constructor por defecto
     public Informe() {
@@ -36,17 +36,17 @@ public class Informe {
     //Constructor con argumentos
     public Informe(long ID, String descripciónTratamiento) {
         this.id = ID;
-        this.descripciónTratamiento = descripciónTratamiento;
+        this.descripcionTratamiento = descripciónTratamiento;
     }
     //Constructor de copia
     public Informe (Informe p) {
-        this.descripciónTratamiento = p.getDescripciónTratamiento();
+        this.descripcionTratamiento = p.getDescripciónTratamiento();
         this.id = p.getID();
     }
     //Otros métodos sobreescritos
     @Override
     public String toString() {
-        return "Informe{" + "ID=" + id + ", descripci\u00f3nTratamiento=" + descripciónTratamiento + '}';
+        return "Informe{" + "ID=" + id + ", descripci\u00f3nTratamiento=" + descripcionTratamiento + '}';
     }
     
      public String data() {
