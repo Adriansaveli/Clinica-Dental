@@ -8,13 +8,14 @@ package clinica;
  * version 2
  * @author DAW109
  */
-public class Enfermeria {
+public class Enfermeria extends Empleado{
     
     private char categoria;
     //Dado que la categoría tiene que estar solo representado por una letra es un char PUEDE TENER LOS VALORES QUE SE QUIERAN PUESTO QUE PUEDEN PONER LAS CATEGORÍAS COMO CATEGORÍA A,0, 1... SOLO PUEDE SER UN CARACTER.
 
     //Constructor por defecto
     public Enfermeria() {
+        super();
     }
     //Constructor con parámetros
 

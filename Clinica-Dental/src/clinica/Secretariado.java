@@ -9,7 +9,7 @@ package clinica;
  * @version 2.0
  * @author AdrianSaveli
  */
-public class Secretariado {
+public class Secretariado extends Empleado{
     private int añosExperiencia;//Son los años de experiencia del secretariado.Debe ser un número determinado.
     
     //Getters y setters
@@ -23,6 +23,7 @@ public class Secretariado {
     }
     //Constructor por defecto
     public Secretariado() {
+        super();
     }
     //Constructor con argumentos
     public Secretariado(int añosExperiencia) {
@@ -37,6 +38,7 @@ public class Secretariado {
     public String toString() {
         return "Secretariado{" + "a\u00f1osExperiencia=" + añosExperiencia + '}';
     }
+    @Override
      public String data() {
         return ""+getAñosExperiencia();
     }
