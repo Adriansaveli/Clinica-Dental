@@ -11,7 +11,7 @@
 public class Tratamiento {
  
     
-    protected long idTratamiento;
+    protected long id;
     //Identificador del tratamiento relacionado con el paciente TIENE QUE TENER VALOR MAYOR A CERO
     private String nombre;
     //Nombre del tratamiento Ej; Endodoncia... 
@@ -23,31 +23,31 @@ public class Tratamiento {
     public Tratamiento() {
     }
 
-    public Tratamiento(long idTratamiento, String nombre, String fechaInicio, boolean consentimiento) {
-        this.idTratamiento = idTratamiento;
+    public Tratamiento(long id, String nombre, String fechaInicio, boolean consentimiento) {
+        this.id = id;
         this.nombre = nombre;
         this.fechaInicio = fechaInicio;
         this.consentimiento = consentimiento;
     }
     
     public Tratamiento (Tratamiento t) {
-        this.idTratamiento = t.getIdTratamiento ();
+        this.id = t.getId ();
         this.nombre = t.getNombre();
         this.fechaInicio = t.getFechaInicio();
         this.consentimiento = t.isConsentimiento();
        
     }
 
-    public long getIdTratamiento() {
-        return idTratamiento;
+    public long getId() {
+        return id;
     }
 
     /**
      *
-     * @param idTratamiento
+     * @param id
      */
-    public void setIdTratamiento(long idTratamiento) {
-        this.idTratamiento = idTratamiento;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -76,11 +76,11 @@ public class Tratamiento {
 
     @Override
     public String toString() {
-        return "Tratamiento{" + "idTratamiento=" + idTratamiento + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", consentimiento=" + consentimiento + '}';
+        return "Tratamiento{" + "idTratamiento=" + id + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", consentimiento=" + consentimiento + '}';
     }
      
  public String Data (){
-     return getIdTratamiento() + " | " + getNombre() + " | " + getFechaInicio() + " | " + isConsentimiento ();
+     return getId() + " | " + getNombre() + " | " + getFechaInicio() + " | " + isConsentimiento ();
  }
 
     
