@@ -11,7 +11,7 @@ package clinica;
  */
 public class Empleado{
     
-    private int idEmpleado;
+    protected long id;
     private String nombre;
     private String apellido;
     private String telefono; 
@@ -22,7 +22,7 @@ public class Empleado{
     }
 
     public Empleado(int idEmpleado, String nombre, String apellido, String telefono, String nif, String direccion) {
-        this.idEmpleado = idEmpleado;
+        this.id = idEmpleado;
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -31,7 +31,9 @@ public class Empleado{
     }
     
     public Empleado(Empleado e) {
-        this.idEmpleado=e.getIdEmpleado();
+
+        this.id=e.getId();
+
         this.nombre=e.getNombre();
         this.apellido=e.getApellido();
         this.telefono=e.getTelefono();
@@ -40,12 +42,16 @@ public class Empleado{
         
     }
 
-    public int getIdEmpleado() {
-        return idEmpleado;
+
+    public long getId() {
+
+        return id;
     }
 
-    public void setIdEmpleado(int idEmpleado) {
-        this.idEmpleado = idEmpleado;
+
+    public void setId(int id) {
+        this.id = id;
+
     }
 
     public String getNombre() {
@@ -90,12 +96,12 @@ public class Empleado{
 
     @Override
     public String toString() {
-        return "Empleado{" + "idEmpleado=" + idEmpleado + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", nif=" + nif + ", direccion=" + direccion + '}';
+        return "Empleado{" + "idEmpleado=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono + ", nif=" + nif + ", direccion=" + direccion + '}';
     }
     
     public String data() {
       
-        return getIdEmpleado() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
+        return getId() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
     }
     
 }

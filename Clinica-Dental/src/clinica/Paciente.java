@@ -10,22 +10,22 @@ package clinica;
  * @author AdrianSaveli
  */
 public class Paciente {
-    protected long idPaciente;//Es el identificador del paciente.
+    protected long id;//Es el identificador del paciente.
     private String nombre;//Es el nombre del paciente.Cadena de caracteres.
     private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
     private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
     private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
-    private String Id;
+   
     
     //Getters y setters
 
     public long getID() {
-        return idPaciente;
+        return id;
     }
 
     public void setID(long idPaciente) {
-        this.idPaciente = idPaciente;
+        this.id = idPaciente;
     }
     
     
@@ -74,7 +74,7 @@ public class Paciente {
     //Constructor con argumentos
 
     public Paciente(long idPaciente, String nombre, String apellidos, String NIF, String telefono, String direccion) {
-        this.idPaciente = idPaciente;
+        this.id = idPaciente;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.NIF = NIF;
@@ -84,7 +84,7 @@ public class Paciente {
    
     //Constructor de copia
    public Paciente (Paciente p) {
-        this.Id = p.getIdPaciente();
+        this.id = p.getId();
         this.nombre = p.getNombre();
         this.apellidos = p.getApellidos();
         this.NIF = p.getNIF();
@@ -95,7 +95,7 @@ public class Paciente {
     
     @Override
     public String toString() {
-        return "Paciente{" + "ID=" + Id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", telefono=" + telefono + ", direccion=" + direccion + '}';
+        return id + "Paciente{" + "ID" + ", nombre=" + nombre + ", apellidos=" + apellidos + ", NIF=" + NIF + ", telefono=" + telefono + ", direccion=" + direccion + '}';
     }
     
     public String data() {
@@ -103,6 +103,10 @@ public class Paciente {
     }
 
     private String getIdPaciente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private long getId() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

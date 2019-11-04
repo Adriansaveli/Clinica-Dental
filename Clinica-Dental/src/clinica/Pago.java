@@ -10,7 +10,7 @@ import java.util.Date;
  * @author AdrianSaveli
  */
 public class Pago {
-    private long IdPago;//Es el identificador del pago.
+    protected long id;//Es el identificador del pago.
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
     private String métododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
@@ -18,11 +18,11 @@ public class Pago {
     //Getters y setters
     
     public long getID() {
-        return IdPago;
+        return id;
     }
 
     public void setID(long ID) {
-        this.IdPago = ID;
+        this.id = ID;
     }
 
     public Date getFechaDePago() {
@@ -54,14 +54,14 @@ public class Pago {
     }
     //Constructor con argumentos
     public Pago(long ID, Date FechaDePago, int Importe, String MétodoDePago) {
-        this.IdPago = ID;
+        this.id = ID;
         this.fechadePago = FechaDePago;
         this.importe = Importe;
         this.métododePago = MétodoDePago;
     }
     //Constructor de copia
       public Pago (Pago p) {
-        this.IdPago = p.getID();
+        this.id = p.getID();
         this.fechadePago = p.getFechaDePago();
         this.importe = p.getImporte();
         this.métododePago = p.getMétodoDePago();
@@ -71,7 +71,7 @@ public class Pago {
 
     @Override
     public String toString() {
-        return "Pago{" + "ID=" + IdPago + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métododePago + '}';
+        return "Pago{" + "ID=" + id + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métododePago + '}';
     }
     
     public String data() {
