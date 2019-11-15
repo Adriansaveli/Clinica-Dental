@@ -19,11 +19,12 @@ public class Cita {
     public Cita() {
     }
 
-    public Cita(int idCita, Date fecha, char rangoHorario, String hora) {
-        this.id = idCita;
+    public Cita(Date fecha, char rangoHorario, String hora,boolean estado) {
+        
         this.fecha = fecha;
         this.rangoHorario = rangoHorario;
         this.hora = hora;
+        this.estado=estado;
     }
     
     public Cita(Cita c) {

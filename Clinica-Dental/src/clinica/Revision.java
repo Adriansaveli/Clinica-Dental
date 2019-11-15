@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.Date;
 /**
  * @version 2.0
  * @author AdrianSaveli
@@ -27,13 +27,19 @@ public class Revision extends Cita {
     super();
     }
     //Constructor con argumentos
-    public Revision(String anotaciones) {
+    public Revision(Date fecha, char rangoHorario,String hora,boolean estado,String anotaciones) {
+        super(fecha,rangoHorario,hora,estado);
         this.anotaciones = anotaciones;
     }
     //Constructor de copia
     public Revision (Revision p) {
+        super(p);
         this.anotaciones = p.getAnotaciones();  
     }
+    public Revision(Cita c, String anotaciones){
+       super(c);
+       this.anotaciones = anotaciones;
+   } 
     //Otros métodos sobreescritos
     @Override
     public String toString() {

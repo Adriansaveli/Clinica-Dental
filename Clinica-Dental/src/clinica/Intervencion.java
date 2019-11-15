@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.Date;
 /**
  * version 2
  * @author DAW109
@@ -23,12 +23,18 @@ public class Intervencion extends Cita{
         this.duracion = duracion;
     }
     
-    
+    public Intervencion(Date fecha, char rangoHorario,String hora,boolean estado,String duracion){
+        super(fecha,rangoHorario,hora,estado);
+        this.duracion = duracion;
+    }
     public Intervencion (Intervencion i) {
-        
+        super(i);
         this.duracion = i.getDuracion();
     }
-
+    public Intervencion(Cita c, String duracion){
+       super(c);
+       this.duracion = duracion;
+   } 
     public String getDuracion() {
         return duracion;
     }
