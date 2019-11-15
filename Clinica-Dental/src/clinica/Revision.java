@@ -9,7 +9,7 @@ package clinica;
  * @version 2.0
  * @author AdrianSaveli
  */
-public class Revision {
+public class Revision extends Cita {
     private String anotaciones;
     //Son las anotaciones que se escriben en la revisión.Cadena de caracteres.
     
@@ -24,6 +24,7 @@ public class Revision {
     }
     //Constructor por defecto
     public Revision() {
+    super();
     }
     //Constructor con argumentos
     public Revision(String anotaciones) {

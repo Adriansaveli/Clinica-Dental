@@ -9,13 +9,14 @@ package clinica;
  * version 2
  * @author DAW109
  */
-public class Intervencion {
+public class Intervencion extends Cita{
     
     private String duracion;
     
     
-
+    
     public Intervencion() {
+    super();
     }
 
     public Intervencion(String duracion) {
