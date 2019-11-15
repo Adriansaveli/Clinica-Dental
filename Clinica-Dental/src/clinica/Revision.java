@@ -39,7 +39,7 @@ public class Revision extends Cita {
     public Revision(Cita c, String anotaciones){
        super(c);
        this.anotaciones = anotaciones;
-   } 
+    } 
     //Otros métodos sobreescritos
     @Override
     public String toString() {
