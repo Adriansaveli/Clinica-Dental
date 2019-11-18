@@ -21,8 +21,8 @@ public class Empleado{
     public Empleado() {
     }
 
-    public Empleado(int idEmpleado, String nombre, String apellido, String telefono, String nif, String direccion) {
-        this.id = idEmpleado;
+    public Empleado( String nombre, String apellido, String telefono, String nif, String direccion) {
+    
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;

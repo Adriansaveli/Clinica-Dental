@@ -10,20 +10,30 @@ package clinica;
  * @author Mar Santín
  */
 public class Cirujano extends Empleado{
+   
     private String especialidades;//Esto deberia implementarse en un lista de Especialidad. 
 
     public Cirujano() {
         super();
     }
 
-    public Cirujano(String especialidades) {
+    public Cirujano(String nombre, String apellido, String telefono, String nif, String direccion) {
+        super (nombre, apellido, telefono, nif, direccion);
         this.especialidades = especialidades;
     }
     
     public Cirujano(Cirujano c) {
-        
+        super (c);
+     
         this.especialidades=c.getEspecialidades();
+       
     }
+    public Cirujano(Empleado e, String especialidades) {
+        super(e);
+        this.especialidades= especialidades;
+             
+    }
+    
     /*
     Getter de especialidades.
     */

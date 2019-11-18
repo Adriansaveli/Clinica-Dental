@@ -19,13 +19,21 @@ public class Enfermeria extends Empleado{
     }
     //Constructor con parámetros
 
-    public Enfermeria(char categoria) {
+    public Enfermeria(String nombre, String apellido, String telefono, String nif, String direccion) {
+        super (nombre, apellido, telefono, nif, direccion);
         this.categoria = categoria;
     }
     //Constructor de copia
     
     public Enfermeria (Enfermeria e){
+        super (e);
         this.categoria=e.getCategoria();
+    
+    }
+    
+    public Enfermeria (Empleado e, char categoria) {
+        super (e);
+        this.categoria= categoria;
     }
 
     public char getCategoria() {

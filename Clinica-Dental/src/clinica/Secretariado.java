@@ -26,12 +26,20 @@ public class Secretariado extends Empleado{
         super();
     }
     //Constructor con argumentos
-    public Secretariado(int añosExperiencia) {
+    public Secretariado(String nombre, String apellido, String telefono, String nif, String direccion) {
+        super(nombre, apellido, telefono, nif, direccion);
         this.añosExperiencia = añosExperiencia;
     }
     //Constructor de copia
     public Secretariado (Secretariado p) {
+        super(p);
         this.añosExperiencia = p.getAñosExperiencia();
+      
+    }
+    
+    public Secretariado (Empleado e, int añosExperiencia) {
+        super (e);
+        this.añosExperiencia= añosExperiencia;
     }
     //Otros métodos sobreescritos
     @Override
