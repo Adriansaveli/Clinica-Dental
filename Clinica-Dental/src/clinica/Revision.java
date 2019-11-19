@@ -43,9 +43,16 @@ public class Revision extends Cita {
     //Otros métodos sobreescritos
     @Override
     public String toString() {
-        return "Revisi\u00f3n{" + "anotaciones=" + anotaciones + '}';
+        return super.toString()+"Revisi\u00f3n{" + "anotaciones=" + anotaciones + '}';
     }
-     public String data() {
-        return ""+getAnotaciones(); 
+    public String data() {
+        return super.data()+ "|"+getAnotaciones(); 
+    }
+    public Revision getRevisionById (long id){
+        Revision r = new Revision();
+    /*  
+        
+    */    
+        return r;
     }
 }

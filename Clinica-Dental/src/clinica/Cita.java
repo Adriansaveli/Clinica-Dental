@@ -28,17 +28,17 @@ public class Cita {
     }
     
     public Cita(Cita c) {
-        this.id=c.getIdCita();
+        this.id=c.getId();
         this.fecha=c.getFecha();
         this.rangoHorario=c.getRangoHorario();
         this.hora=c.getHora();
     }
 
-    public long getIdCita() {
+    public long getId() {
         return id;
     }
 
-    public void setIdCita(int idCita) {
+    public void setId(int idCita) {
         this.id = idCita;
     }
 
@@ -72,7 +72,7 @@ public class Cita {
     }
    
     public String data() {
-        return getIdCita() + " | " + getFecha() + " | " + getRangoHorario() + " | " + getHora();
+        return getId() + " | " + getFecha() + " | " + getRangoHorario() + " | " + getHora();
     
 }
 
