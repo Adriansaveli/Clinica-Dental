@@ -45,11 +45,19 @@ public class Intervencion extends Cita{
 
     @Override
     public String toString() {
-        return "Intervencion{" + "duracion=" + duracion + '}';
+        return super.toString()+ "Intervencion{" + "duracion=" + duracion + '}';
     }
     
     public String Data () {
         
-        return getDuracion();
+        return super.data()+ "|"+getDuracion();
+    }
+    public Intervencion getIntervencionById (long id){
+        Intervencion i = new Intervencion();
+    /*Este método sirve para que posteriormente se busque el id dado
+      y se obtengan los datos de aquella intervencion que tenga ese id dado.
+      Aunque si no existe ninguna intervencion con ese id saldra null.  
+    */    
+        return i;
     }
 }

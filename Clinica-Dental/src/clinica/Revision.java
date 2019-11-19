@@ -50,8 +50,9 @@ public class Revision extends Cita {
     }
     public Revision getRevisionById (long id){
         Revision r = new Revision();
-    /*  
-        
+    /*Este método sirve para que posteriormente se busque el id dado
+      y se obtengan los datos de aquella revision que tenga ese id dado.
+      Aunque si no existe ninguna revision con ese id saldra null.  
     */    
         return r;
     }
