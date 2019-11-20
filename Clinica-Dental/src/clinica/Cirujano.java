@@ -52,7 +52,7 @@ public class Cirujano extends Empleado{
 
     @Override
     public String toString() {
-        return "Cirujano{" + "especialidades=" + especialidades + '}';
+        return super.toString()+ "Cirujano{" + "especialidades=" + especialidades + '}';
     }
     
     /*

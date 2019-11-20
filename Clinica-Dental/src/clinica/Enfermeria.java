@@ -46,12 +46,12 @@ public class Enfermeria extends Empleado{
 
     public String Data () {
         
-        return getCategoria() + "";
+        return super.data()+ getCategoria() + "";
     }
 
     @Override
     public String toString() {
-        return super.data()+ "Enfermeria{" + "categoria=" + categoria + '}';
+        return super.toString()+  "Enfermeria{" + "categoria=" + categoria + '}';
     }
     public Enfermeria getEnfermeriaById (long id){
         Enfermeria e = new Enfermeria ();

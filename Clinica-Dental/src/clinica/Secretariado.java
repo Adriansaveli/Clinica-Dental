@@ -44,7 +44,7 @@ public class Secretariado extends Empleado{
     //Otros métodos sobreescritos
     @Override
     public String toString() {
-        return "Secretariado{" + "a\u00f1osExperiencia=" + añosExperiencia + '}';
+        return super.toString()+ "Secretariado{" + "a\u00f1osExperiencia=" + añosExperiencia + '}';
     }
     @Override
      public String data() {
