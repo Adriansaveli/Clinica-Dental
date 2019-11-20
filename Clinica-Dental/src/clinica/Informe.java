@@ -52,5 +52,9 @@ public class Informe {
      public String data() {
         return ""+getID()+"|"+getDescripciónTratamiento();
     }
+    public Informe getInformeById (long id){
+        Informe i = new Informe();
+        return i;
+    }
     
 }

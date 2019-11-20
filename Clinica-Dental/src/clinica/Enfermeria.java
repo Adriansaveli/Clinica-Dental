@@ -53,7 +53,10 @@ public class Enfermeria extends Empleado{
     public String toString() {
         return "Enfermeria{" + "categoria=" + categoria + '}';
     }
-
+    public Enfermeria getEnfermeriaById (long id){
+        Enfermeria e = new Enfermeria ();
+         return e;
+    }
  
   
     

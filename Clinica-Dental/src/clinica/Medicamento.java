@@ -76,5 +76,8 @@ public class Medicamento {
     public String Data (){
         return getId() + " | " + getNombre() + " | " + getPrincipioActivo() + " | " + getDosisMaxDiaria();
     }
-    
+    public Medicamento getMedicamentoById (long id){
+        Medicamento m = new Medicamento();
+         return m;
+    }
 }

@@ -46,7 +46,8 @@ public class Revision extends Cita {
         return super.toString()+"Revisi\u00f3n{" + "anotaciones=" + anotaciones + '}';
     }
     public String data() {
-        return super.data()+ "|"+getAnotaciones(); 
+        
+        return super.data()+ "|"+getAnotaciones();
     }
     public Revision getRevisionById (long id){
         Revision r = new Revision();

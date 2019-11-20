@@ -54,5 +54,9 @@ public class Historial {
     public String data() {
         return getId() + " | " + getDescripcion();
     }
+    public Historial getHistorialById (long id){
+        Historial h = new Historial();
+         return h;
+    }
 }
 

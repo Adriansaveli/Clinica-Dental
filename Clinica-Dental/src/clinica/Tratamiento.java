@@ -79,10 +79,14 @@ public class Tratamiento {
         return "Tratamiento{" + "idTratamiento=" + id + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", consentimiento=" + consentimiento + '}';
     }
      
- public String Data (){
+    public String Data (){
      return getId() + " | " + getNombre() + " | " + getFechaInicio() + " | " + isConsentimiento ();
- }
-
+    }
+    public Tratamiento getTratamientoById (long id){
+        Tratamiento t = new Tratamiento();
+         return t;
+    }
+ 
     
 }
 

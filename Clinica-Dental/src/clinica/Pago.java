@@ -77,4 +77,8 @@ public class Pago {
     public String data() {
         return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMétodoDePago();
     }
+    public Pago getPagoById (long id){
+        Pago p = new Pago();
+        return p;
+    }
 }

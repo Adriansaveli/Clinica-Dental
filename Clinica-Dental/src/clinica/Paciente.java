@@ -109,4 +109,8 @@ public class Paciente {
     private long getId() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    public Paciente getPacienteById (long id){
+        Paciente p = new Paciente();
+        return p;
+    }
 }

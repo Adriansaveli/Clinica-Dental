@@ -50,6 +50,10 @@ public class Secretariado extends Empleado{
      public String data() {
         return ""+getAñosExperiencia();
     }
+    public Secretariado getSecretariadoById (long id){
+        Secretariado s = new Secretariado();
+         return s;
+    }
     
    
     
