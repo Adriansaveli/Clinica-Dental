@@ -74,6 +74,10 @@ public class Cita {
     public String data() {
         return getId() + " | " + getFecha() + " | " + getRangoHorario() + " | " + getHora();
     
-}
+    }
+    public Cita getCitaById (long id){
+        Cita c = new Cita();
+         return c;
+    }
 
 }

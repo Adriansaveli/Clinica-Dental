@@ -48,7 +48,11 @@ public class Alergia {
     public String toString() {
         return "Alerg\u00eda{" + "ID=" + id + ", nombreAlerg\u00eda=" + nombreAlergía + '}';
     }
-     public String data() {
+    public String data() {
         return ""+getID()+"|"+getNombreAlergia();
+    }
+    public Alergia getAlergiaById (long id){
+        Alergia a = new Alergia();
+         return a;
     }
 }

@@ -103,5 +103,9 @@ public class Empleado{
       
         return getId() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
     }
+    public Empleado getEmpleadoById (long id){
+        Empleado e = new Empleado();
+         return e;
+    }
     
 }

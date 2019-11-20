@@ -62,4 +62,8 @@ public class Cobro {
     public String data() {
         return getIdCobro() + " | " + getImporteTotalEuros()+ " | " + getFechaFinalizacion();
     }
+    public Cobro getCobroById (long id){
+        Cobro c = new Cobro();
+        return c;
+    }
 }

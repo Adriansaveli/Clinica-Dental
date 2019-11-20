@@ -62,4 +62,8 @@ public class Cirujano extends Empleado{
     public String data() {
         return getEspecialidades();
     }
+    public Cirujano getCirujanoById (long id){
+        Cirujano c = new Cirujano();
+         return c;
+    }
 }
