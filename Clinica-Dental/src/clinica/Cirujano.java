@@ -60,7 +60,7 @@ public class Cirujano extends Empleado{
     */
     @Override
     public String data() {
-        return getEspecialidades();
+        return super.data()+getEspecialidades();
     }
     public Cirujano getCirujanoById (long id){
         Cirujano c = new Cirujano();
