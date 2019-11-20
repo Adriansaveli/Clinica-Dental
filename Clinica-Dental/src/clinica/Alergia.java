@@ -53,6 +53,6 @@ public class Alergia {
     }
     public Alergia getAlergiaById (long id){
         Alergia a = new Alergia();
-         return a;
+        return a;
     }
 }

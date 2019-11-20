@@ -5,6 +5,9 @@
  */
 package clinica;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * @version 4.0
  * @author AdrianSaveli
@@ -20,11 +23,11 @@ public class Paciente {
     
     //Getters y setters
 
-    public long getID() {
+    public long getId() {
         return id;
     }
 
-    public void setID(long idPaciente) {
+    public void setId(long idPaciente) {
         this.id = idPaciente;
     }
     
@@ -99,18 +102,30 @@ public class Paciente {
     }
     
     public String data() {
-        return ""+getID()+"|"+getNombre()+"|"+getApellidos()+"|"+getNIF()+"|"+getTelefono()+"|"+getDireccion();
+        return ""+getId()+"|"+getNombre()+"|"+getApellidos()+"|"+getNIF()+"|"+getTelefono()+"|"+getDireccion();
     }
 
-    private String getIdPaciente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
-    private long getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Paciente> getAllPaciente (){
+    ArrayList <Paciente> pacientes = new ArrayList <Paciente>();
+    return pacientes;
     }
+    
     public Paciente getPacienteById (long id){
         Paciente p = new Paciente();
+        return p;
+    }
+    public Paciente nuevoPaciente (){
+        Paciente p = new Paciente();
+        Scanner in= new Scanner(System.in);
+        
+        String n,a,ni,t,d;
+        System.out.println("Dame el nombre:");
+        n=in.nextLine();
+        p.setNombre(n);
+        
+        
         return p;
     }
 }
