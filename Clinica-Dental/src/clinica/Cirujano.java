@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.ArrayList;
 /**
  * @version 2.0
  * @author Mar Santín
@@ -61,6 +61,10 @@ public class Cirujano extends Empleado{
     @Override
     public String data() {
         return super.data()+getEspecialidades();
+    }
+    public ArrayList<Cirujano> getAllCirujano (){
+    ArrayList <Cirujano> cirujanos = new ArrayList <Cirujano>();
+    return cirujanos ;
     }
     public Cirujano getCirujanoById (long id){
         Cirujano c = new Cirujano();

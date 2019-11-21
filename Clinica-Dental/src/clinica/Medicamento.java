@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.util.ArrayList;
 /**
  * version 3.0
  * @author DAW109

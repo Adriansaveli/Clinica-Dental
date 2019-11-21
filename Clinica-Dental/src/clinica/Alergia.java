@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
-
+import java.util.ArrayList;
 /**
  * @version 3.1
  * @author AdrianSaveli
@@ -50,6 +50,10 @@ public class Alergia {
     }
     public String data() {
         return ""+getID()+"|"+getNombreAlergia();
+    }
+    public ArrayList<Alergia> getAllAlergia (){
+    ArrayList <Alergia> alergias = new ArrayList <Alergia>();
+    return alergias;
     }
     public Alergia getAlergiaById (long id){
         Alergia a = new Alergia();

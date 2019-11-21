@@ -5,6 +5,7 @@
  */
 package clinica;
 import java.util.Date;
+import java.util.ArrayList;
 /**
  * @version 2.0
  * @author DAW109
@@ -61,6 +62,10 @@ public class Cobro {
     
     public String data() {
         return getIdCobro() + " | " + getImporteTotalEuros()+ " | " + getFechaFinalizacion();
+    }
+    public ArrayList<Cobro> getAllCobro (){
+    ArrayList <Cobro> cobros = new ArrayList <Cobro>();
+    return cobros;
     }
     public Cobro getCobroById (long id){
         Cobro c = new Cobro();
