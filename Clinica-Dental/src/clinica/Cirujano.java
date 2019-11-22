@@ -7,7 +7,7 @@ package clinica;
 import java.util.ArrayList;
 /**
  * @version 2.0
- * @author Mar Santín
+ * @author DAW106
  */
 public class Cirujano extends Empleado{
    

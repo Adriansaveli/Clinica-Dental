@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.ArrayList;
 /**
  * @version 2.0
- * @author Mar Santín
+ * @author DAW106
  */
 public class Cita {
     protected long id;

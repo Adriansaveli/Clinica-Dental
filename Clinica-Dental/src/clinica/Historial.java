@@ -9,7 +9,7 @@ import java.util.ArrayList;
 //import java.util.*;
 /**
  * @version 2.0
- * @author DAW109
+ * @author DAW106
  * Clase del Historial de la clinica
  */
 public class Historial {
