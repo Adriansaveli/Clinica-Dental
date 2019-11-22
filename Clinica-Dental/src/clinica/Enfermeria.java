@@ -54,12 +54,19 @@ public class Enfermeria extends Empleado{
     public String toString() {
         return super.toString()+  "Enfermeria{" + "categoria=" + categoria + '}';
     }
+    
     public Enfermeria getEnfermeriaById (long id){
         Enfermeria e = new Enfermeria ();
          return e;
     }
  
-  
+  public ArrayList<Enfermeria> getAllEnfermeria (){
+      
+      ArrayList<Enfermeria> enfermerias = new ArrayList <Enfermeria>();
+      
+      return enfermerias;
+              
+  }
     
     
     

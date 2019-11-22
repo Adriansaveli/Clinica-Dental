@@ -116,6 +116,8 @@ public class Paciente {
         Paciente p = new Paciente();
         return p;
     }
+    
+    
     public Paciente nuevoPaciente (){
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);

@@ -50,10 +50,14 @@ public class Revision extends Cita {
         
         return super.data()+ "|"+getAnotaciones();
     }
+   
+    
     public ArrayList<Revision> getAllRevision (){
     ArrayList <Revision> revisiones = new ArrayList <Revision>();
     return revisiones ;
     }
+    
+    
     public Revision getRevisionById (long id){
         Revision r = new Revision();
     /*Este método sirve para que posteriormente se busque el id dado

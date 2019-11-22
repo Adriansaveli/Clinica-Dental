@@ -77,10 +77,14 @@ public class Medicamento {
     public String Data (){
         return getId() + " | " + getNombre() + " | " + getPrincipioActivo() + " | " + getDosisMaxDiaria();
     }
+    
+    
     public ArrayList<Medicamento> getAllMedicamento (){
     ArrayList <Medicamento> medicamentos = new ArrayList <Medicamento>();
     return medicamentos ;
     }
+    
+    
     public Medicamento getMedicamentoById (long id){
         Medicamento m = new Medicamento();
          return m;
