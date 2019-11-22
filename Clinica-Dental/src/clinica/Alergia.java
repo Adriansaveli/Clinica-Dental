@@ -52,11 +52,16 @@ public class Alergia {
         return ""+getID()+"|"+getNombreAlergia();
     }
     public ArrayList<Alergia> getAllAlergia (){
+        
     ArrayList <Alergia> alergias = new ArrayList <Alergia>();
+    
     return alergias;
     }
+    
     public Alergia getAlergiaById (long id){
+        
         Alergia a = new Alergia();
+        
         return a;
     }
 }

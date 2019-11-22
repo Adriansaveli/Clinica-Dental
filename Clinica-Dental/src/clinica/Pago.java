@@ -78,10 +78,14 @@ public class Pago {
     public String data() {
         return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMétodoDePago();
     }
+    
+    
     public ArrayList<Pago> getAllPago (){
     ArrayList <Pago> pagos = new ArrayList <Pago>();
     return pagos;
     }
+    
+   
     public Pago getPagoById (long id){
         Pago p = new Pago();
         return p;

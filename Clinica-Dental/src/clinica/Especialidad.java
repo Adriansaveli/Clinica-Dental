@@ -60,7 +60,22 @@ public class Especialidad {
         
         return getNombre() + " | " + getId();
     }
+
     
+    public ArrayList<Especialidad> getAllEspecialidad(){
+        
+        ArrayList <Especialidad> especilidades = new ArrayList <Especialidad>();
+        
+        return especilidades;
+        
+    }
     
+
     
+    public Especialidad getEspecilidadById (long id){
+        
+        Especialidad e = new Especialidad();
+        
+        return e;
+    }
 }

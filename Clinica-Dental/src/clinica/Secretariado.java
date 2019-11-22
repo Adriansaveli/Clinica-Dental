@@ -47,16 +47,25 @@ public class Secretariado extends Empleado{
     public String toString() {
         return super.toString()+ "Secretariado{" + "a\u00f1osExperiencia=" + añosExperiencia + '}';
     }
+    
+    
     @Override
      public String data() {
         return super.data()+""+getAñosExperiencia();
     }
+     
+     
     public Secretariado getSecretariadoById (long id){
         Secretariado s = new Secretariado();
          return s;
     }
     
-   
+   public ArrayList<Secretariado> getAllSecretariado(){
+       
+       ArrayList<Secretariado> secretariados = new ArrayList<Secretariado>();
+       
+       return secretariados;
+   }
     
      
     
