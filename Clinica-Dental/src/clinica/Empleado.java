@@ -103,6 +103,10 @@ public class Empleado{
       
         return getId() + " | " + getNombre() + " | " + getApellido() + " | " + getTelefono() + " | " + getNif() + " | " + getDireccion();
     }
+    public ArrayList<Empleado> getAllCita (){
+    ArrayList <Empleado> empleados = new ArrayList <Empleado>();
+    return empleados ;
+    }
     public Empleado getEmpleadoById (long id){
         Empleado e = new Empleado();
          return e;

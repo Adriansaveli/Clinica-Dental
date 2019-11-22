@@ -49,8 +49,12 @@ public class Informe {
         return "Informe{" + "ID=" + id + ", descripci\u00f3nTratamiento=" + descripcionTratamiento + '}';
     }
     
-     public String data() {
+    public String data() {
         return ""+getID()+"|"+getDescripciónTratamiento();
+    }
+    public ArrayList<Informe> getAllInforme (){
+    ArrayList <Informe> informes = new ArrayList <Informe>();
+    return informes ;
     }
     public Informe getInformeById (long id){
         Informe i = new Informe();

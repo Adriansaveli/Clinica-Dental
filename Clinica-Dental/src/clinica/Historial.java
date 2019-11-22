@@ -55,6 +55,10 @@ public class Historial {
     public String data() {
         return getId() + " | " + getDescripcion();
     }
+    public ArrayList<Historial> getAllHistorial (){
+    ArrayList <Historial> historiales = new ArrayList <Historial>();
+    return historiales ;
+    }
     public Historial getHistorialById (long id){
         Historial h = new Historial();
          return h;

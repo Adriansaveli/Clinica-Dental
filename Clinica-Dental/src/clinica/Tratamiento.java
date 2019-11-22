@@ -83,6 +83,10 @@ public class Tratamiento {
     public String Data (){
      return getId() + " | " + getNombre() + " | " + getFechaInicio() + " | " + isConsentimiento ();
     }
+    public ArrayList<Tratamiento> getAllTratamiento (){
+    ArrayList <Tratamiento> tratamientos = new ArrayList <Tratamiento>();
+    return tratamientos ;
+    }
     public Tratamiento getTratamientoById (long id){
         Tratamiento t = new Tratamiento();
          return t;

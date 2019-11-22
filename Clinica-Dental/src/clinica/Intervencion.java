@@ -53,6 +53,10 @@ public class Intervencion extends Cita{
         
         return super.data()+ "|"+getDuracion();
     }
+    public ArrayList<Intervencion> getAllIntervencion (){
+    ArrayList <Intervencion> intervenciones = new ArrayList <Intervencion>();
+    return intervenciones ;
+    }
     public Intervencion getIntervencionById (long id){
         Intervencion i = new Intervencion();
     /*Este método sirve para que posteriormente se busque el id dado
