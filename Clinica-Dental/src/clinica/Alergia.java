@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Alergia {
     protected long id;//Es el identificador de las alergia.
     private String nombreAlergia;//Es el nombre de la alergia.Cadena de caracteres.
-    
+    private ArrayList<Historial> historiales;
     //Getters y setters
     
     public long getID() {
