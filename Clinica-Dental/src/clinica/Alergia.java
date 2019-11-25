@@ -59,9 +59,11 @@ public class Alergia {
     }
     
     public Alergia getAlergiaById (long id){
-        
         Alergia a = new Alergia();
-        
+        /*Este método sirve para que posteriormente se busque el id dado
+        y se obtengan los datos de aquella alergia que tenga ese id dado.
+        Aunque si no existe ninguna alergia con ese id saldra null.  
+        */ 
         return a;
     }
 }
