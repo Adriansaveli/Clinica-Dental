@@ -13,16 +13,21 @@ import java.util.Scanner;
  * @author AdrianSaveli
  */
 public class Paciente {
+    
     Tratamiento tratamiento;
+    
     Historial historial;
-    Pago pago;
+    
     protected long id;//Es el identificador del paciente.
+    
     private String nombre;//Es el nombre del paciente.Cadena de caracteres.
     private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
     private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
     private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
-   
+    private ArrayList<Pago> pagos; //*Lista de pagos.
+    
+
     
     //Getters y setters
 
@@ -74,6 +79,15 @@ public class Paciente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public ArrayList<Pago> getPagos() {
+        return pagos;
+    }
+
+    public void setPagos(ArrayList<Pago> pagos) {
+        this.pagos = pagos;
+    }
+   
     //Constructor por defecto
     public Paciente() {
     }

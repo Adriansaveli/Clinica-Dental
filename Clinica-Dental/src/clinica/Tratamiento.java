@@ -12,6 +12,9 @@ import java.util.ArrayList;
 public class Tratamiento {
  
     Informe informe;
+    
+    Cobro cobro;
+    
     protected long id;
     //Identificador del tratamiento relacionado con el paciente TIENE QUE TENER VALOR MAYOR A CERO
     private String nombre;

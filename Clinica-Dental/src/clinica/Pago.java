@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author AdrianSaveli
  */
 public class Pago {
+    
     protected long id;//Es el identificador del pago.
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
