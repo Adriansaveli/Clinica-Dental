@@ -58,6 +58,10 @@ public class Informe {
     }
     public Informe getInformeById (long id){
         Informe i = new Informe();
+        /*Este método sirve para que posteriormente se busque el id dado
+        y se obtengan los datos de aquel informe que tenga ese id dado.
+        Aunque si no existe ningún informe con ese id saldra null.  
+        */ 
         return i;
     }
     

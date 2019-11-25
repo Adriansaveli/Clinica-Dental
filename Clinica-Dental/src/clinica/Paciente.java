@@ -117,6 +117,10 @@ public class Paciente {
     
     public Paciente getPacienteById (long id){
         Paciente p = new Paciente();
+        /*Este método sirve para que posteriormente se busque el id dado
+        y se obtengan los datos de aquel paciente que tenga ese id dado.
+        Aunque si no existe ningún paciente con ese id saldra null.  
+        */ 
         return p;
     }
     

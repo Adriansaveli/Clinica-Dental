@@ -57,6 +57,10 @@ public class Secretariado extends Empleado{
      
     public Secretariado getSecretariadoById (long id){
         Secretariado s = new Secretariado();
+        /*Este método sirve para que posteriormente se busque el id dado
+        y se obtengan los datos de aquel secretariado que tenga ese id dado.
+        Aunque si no existe ningún secretariado con ese id saldra null.  
+        */ 
          return s;
     }
     

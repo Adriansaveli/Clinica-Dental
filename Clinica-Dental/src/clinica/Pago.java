@@ -88,6 +88,10 @@ public class Pago {
    
     public Pago getPagoById (long id){
         Pago p = new Pago();
+        /*Este método sirve para que posteriormente se busque el id dado
+        y se obtengan los datos de aquel pago que tenga ese id dado.
+        Aunque si no existe ningún pago con ese id saldra null.  
+        */ 
         return p;
     }
 }
