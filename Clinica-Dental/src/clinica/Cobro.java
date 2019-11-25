@@ -15,6 +15,7 @@ public class Cobro {
     protected long id;
     private double importeTotalEuros;
     private Date fechaFinalizacion;
+    private ArrayList <Pago> pagos; 
 
     public Cobro() {
     }
@@ -54,6 +55,15 @@ public class Cobro {
     public void setFechaFinalizacion(Date fechaFinalizacion) {
         this.fechaFinalizacion = fechaFinalizacion;
     }
+
+    public ArrayList<Pago> getPagos() {
+        return pagos;
+    }
+
+    public void setPagos(ArrayList<Pago> pagos) {
+        this.pagos = pagos;
+    }
+   
 
     @Override
     public String toString() {

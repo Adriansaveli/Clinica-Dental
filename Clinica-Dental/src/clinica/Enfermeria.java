@@ -13,7 +13,7 @@ public class Enfermeria extends Empleado{
     
     private char categoria;
     //Dado que la categoría tiene que estar solo representado por una letra es un char PUEDE TENER LOS VALORES QUE SE QUIERAN PUESTO QUE PUEDEN PONER LAS CATEGORÍAS COMO CATEGORÍA A,0, 1... SOLO PUEDE SER UN CARACTER.
-
+    private ArrayList <Intervencion> intervenciones;
     //Constructor por defecto
     public Enfermeria() {
         super();
@@ -45,6 +45,15 @@ public class Enfermeria extends Empleado{
         this.categoria = categoria;
     }
 
+    public ArrayList<Intervencion> getIntervenciones() {
+        return intervenciones;
+    }
+
+    public void setIntervenciones(ArrayList<Intervencion> intervenciones) {
+        this.intervenciones = intervenciones;
+    }
+  
+
     public String Data () {
         
         return super.data()+ getCategoria() + "";
@@ -67,7 +76,12 @@ public class Enfermeria extends Empleado{
       return enfermerias;
               
   }
-    
+  
+  public static Enfermeria nuevoEnfermeria(){
+       Enfermeria e = new Enfermeria();
+      
+      return e;
+  }
     
     
 }
