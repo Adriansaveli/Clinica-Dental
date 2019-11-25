@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Paciente {
     
-    Tratamiento tratamiento;
+    
     
     Historial historial;
     
