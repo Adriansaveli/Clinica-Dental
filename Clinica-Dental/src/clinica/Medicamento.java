@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author DAW109
  */
 public class Medicamento {
-    
+    Alergia alergia;
     protected long id;
     //Identificador del medicamento. VALOR SUPERIOR A CERO
     private String nombre;

@@ -13,6 +13,9 @@ import java.util.Scanner;
  * @author AdrianSaveli
  */
 public class Paciente {
+    Tratamiento tratamiento;
+    Historial historial;
+    Pago pago;
     protected long id;//Es el identificador del paciente.
     private String nombre;//Es el nombre del paciente.Cadena de caracteres.
     private String apellidos;//Es el apellido del paciente.Cadena de caracteres.
