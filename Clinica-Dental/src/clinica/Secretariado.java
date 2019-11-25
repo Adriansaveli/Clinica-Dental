@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class Secretariado extends Empleado{
     private int añosExperiencia;//Son los años de experiencia del secretariado.Debe ser un número determinado.
     private ArrayList<Informe> informes;
+    Cita cita;
     //Getters y setters
 
     public ArrayList<Informe> getInformes() {
