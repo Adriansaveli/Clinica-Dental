@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Alergia {
     protected long id;//Es el identificador de las alergia.
-    private String nombreAlergía;//Es el nombre de la alergia.Cadena de caracteres.
+    private String nombreAlergia;//Es el nombre de la alergia.Cadena de caracteres.
     
     //Getters y setters
     
@@ -24,11 +24,11 @@ public class Alergia {
     }
 
     public String getNombreAlergia() {
-        return nombreAlergía;
+        return nombreAlergia;
     }
 
     public void setNombreAlergía(String nombreAlergía) {
-        this.nombreAlergía = nombreAlergía;
+        this.nombreAlergia = nombreAlergía;
     }
     //Constructor por defecto
     public Alergia() {
@@ -36,17 +36,17 @@ public class Alergia {
     //Constructor con argumentos
     public Alergia(long ID, String nombreAlergía) {
         this.id = ID;
-        this.nombreAlergía = nombreAlergía;
+        this.nombreAlergia = nombreAlergía;
     }
     //Constructor de copia
     public Alergia (Alergia p) {
-        this.nombreAlergía = p.getNombreAlergia();
+        this.nombreAlergia = p.getNombreAlergia();
         this.id = p.getID();
     }
     //Otros métodos sobreescritos
     @Override
     public String toString() {
-        return "Alerg\u00eda{" + "ID=" + id + ", nombreAlerg\u00eda=" + nombreAlergía + '}';
+        return "Alerg\u00eda{" + "ID=" + id + ", nombreAlerg\u00eda=" + nombreAlergia + '}';
     }
     public String data() {
         return ""+getID()+"|"+getNombreAlergia();
