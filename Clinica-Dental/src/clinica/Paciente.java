@@ -147,8 +147,18 @@ public class Paciente {
         System.out.println("Dame el nombre:");
         n=in.nextLine();
         p.setNombre(n);
-        
-        
+        System.out.println("Dame el apellido:");
+        a=in.nextLine();
+        p.setApellidos(a);
+        System.out.println("Dame el NIF:");
+        ni=in.nextLine();
+        p.setNIF(ni);
+        System.out.println("Dame el telefono:");
+        t=in.nextLine();
+        p.setTelefono(t);
+        System.out.println("Dame la dirección:");
+        d=in.nextLine();
+        p.setDireccion(d);  
         return p;
     }
 }
