@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Cirujano extends Empleado{
    
     private String especialidades;//Esto deberia implementarse en un lista de Especialidad. 
-
+    private ArrayList<Revision> revisiones;
     public Cirujano() {
         super();
     }
@@ -32,6 +32,14 @@ public class Cirujano extends Empleado{
         super(e);
         this.especialidades= especialidades;
              
+    }
+
+    public ArrayList<Revision> getRevisiones() {
+        return revisiones;
+    }
+
+    public void setRevisiones(ArrayList<Revision> revisiones) {
+        this.revisiones = revisiones;
     }
     
     /*

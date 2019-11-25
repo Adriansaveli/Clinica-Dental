@@ -12,8 +12,16 @@ import java.util.ArrayList;
 public class Informe {
     protected long id;//Es el identificador del informe.
     private String descripcionTratamiento;//Es la descripción del tratamiento a seguir del paciente.Cadena de caracteres.
-    
+    private ArrayList<Secretariado> secretariados;
     //Getters y setters
+
+    public ArrayList<Secretariado> getSecretariados() {
+        return secretariados;
+    }
+
+    public void setSecretariados(ArrayList<Secretariado> secretariados) {
+        this.secretariados = secretariados;
+    }
     
     public long getID() {
         return id;

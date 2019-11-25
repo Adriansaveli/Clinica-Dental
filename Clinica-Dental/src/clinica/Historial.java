@@ -16,8 +16,9 @@ public class Historial {
     
     protected long id;//Lleva el identificador del historial
     private String descripcion;//Descripcion del historial
+    private ArrayList<Alergia> alergias;
   //private List<Alergia>alergias=new ArrayList<Alergia>();
-
+ 
     public Historial() {
     }
 
@@ -31,6 +32,14 @@ public class Historial {
         this.id=h.getId();
     }
 
+    public ArrayList<Alergia> getAlergias() {
+        return alergias;
+    }
+
+    public void setAlergias(ArrayList<Alergia> alergias) {
+        this.alergias = alergias;
+    }
+    
     public long getId() {
         return id;
     }
