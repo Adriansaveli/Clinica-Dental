@@ -143,22 +143,22 @@ public class Paciente {
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);
         
-        String nombre,apellido,nif,telefono,direccion;
+        String nom,ape,nif,tel,dir;
         System.out.println("Dame el nombre:");
-        nombre=in.nextLine();
-        p.setNombre(nombre);
+        nom=in.nextLine();
+        p.setNombre(nom);
         System.out.println("Dame el apellido:");
-        apellido=in.nextLine();
-        p.setApellidos(apellido);
+        ape=in.nextLine();
+        p.setApellidos(ape);
         System.out.println("Dame el NIF:");
         nif=in.nextLine();
         p.setNIF(nif);
         System.out.println("Dame el telefono:");
-        telefono=in.nextLine();
-        p.setTelefono(telefono);
+        tel=in.nextLine();
+        p.setTelefono(tel);
         System.out.println("Dame la dirección:");
-        direccion=in.nextLine();
-        p.setDireccion(direccion);  
+        dir=in.nextLine();
+        p.setDireccion(dir);  
         return p;
     }
 }
