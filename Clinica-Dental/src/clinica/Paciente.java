@@ -25,7 +25,7 @@ public class Paciente {
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
     private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
     private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
-    private ArrayList<Pago> pagos; //*Lista de pagos.
+    
     
 
     
@@ -80,13 +80,6 @@ public class Paciente {
         this.direccion = direccion;
     }
 
-    public ArrayList<Pago> getPagos() {
-        return pagos;
-    }
-
-    public void setPagos(ArrayList<Pago> pagos) {
-        this.pagos = pagos;
-    }
    
     //Constructor por defecto
     public Paciente() {
@@ -142,7 +135,9 @@ public class Paciente {
     public Paciente nuevoPaciente (){
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);
+        
         boolean correcto;
+        do{
         String nom,ape,nif,tel,dir;
         System.out.println("Dame el nombre:");
         nom=in.nextLine();
@@ -162,6 +157,8 @@ public class Paciente {
         System.out.println("¿Son correctos los datos del paciente?");
         
         correcto = Utilidades.leerBoleano();
+        }
+        while (!correcto);
         return p;
     }
 }

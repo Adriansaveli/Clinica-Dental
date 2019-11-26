@@ -79,6 +79,11 @@ public class Secretariado extends Empleado{
        
        return secretariados;
    }
+     public static Secretariado nuevoSecretariado(){
+       Secretariado s = new Secretariado();
+      
+      return s;
+  }
     
      
     

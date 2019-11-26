@@ -72,5 +72,10 @@ public class Historial {
         Historial h = new Historial();
          return h;
     }
+      public static Historial nuevoHistorial(){
+       Historial h = new Historial();
+      
+      return h;
+  }
 }
 
