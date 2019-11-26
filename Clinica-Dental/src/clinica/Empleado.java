@@ -10,6 +10,7 @@ import java.util.ArrayList;
  * @author DAW106
  */
 public class Empleado{
+
     
     protected long id;
     private String nombre;
@@ -117,5 +118,9 @@ public class Empleado{
         Empleado e = new Empleado();
          return e;
     }
-    
+      public static Empleado nuevoEmpleado(){
+       Empleado e = new Empleado();
+      
+      return e;
+  }
 }

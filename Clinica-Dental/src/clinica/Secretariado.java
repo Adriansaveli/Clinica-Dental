@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * @version 2.0
@@ -79,11 +81,43 @@ public class Secretariado extends Empleado{
        
        return secretariados;
    }
-     public static Secretariado nuevoSecretariado(){
-       Secretariado s = new Secretariado();
-      
-      return s;
-  }
+       public static Secretariado nuevoSecretariado () throws ParseException{
+  
+        Secretariado s;
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        
+        do{
+            Empleado e = Empleado.nuevoEmpleado();
+            s = new Secretariado();
+            
+            System.out.println("Introduzca los años de experiencia:");
+            String ae = in.nextLine();
+            // i.setDuracion(ae);
+            
+            ArrayList <Informe> informes = new ArrayList();
+            System.out.println("¿Quieres introducir los informes? ");
+            boolean resp = Utilidades.leerBoleano();
+            if(resp){
+               boolean resp2;
+                do {
+                   Informe i = Informe.nuevoInforme();
+                   informes.add(i);
+                   System.out.println("¿Quiere introducir otro informe?");
+                   resp2 =Utilidades.leerBoleano();
+                }
+                while(resp2);    
+                s.setInformes (informes);
+            }
+            s = new Secretariado(e,ae, informes);
+            System.out.println("El secretariado introducido es: " + s);
+            System.out.println("¿Son correctos los datos del secreatriado?");
+            correcto = Utilidades.leerBoleano();
+        }
+        while(!correcto);
+        
+     return s;   
+    } 
     
      
     

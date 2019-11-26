@@ -78,4 +78,9 @@ public class Cirujano extends Empleado{
         Cirujano c = new Cirujano();
          return c;
     }
+    public static Cirujano nuevoCirujano(){
+       Cirujano ci = new Cirujano();
+      
+      return ci;
+  }
 }
