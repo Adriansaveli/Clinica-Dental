@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 4.1
  * @author AdrianSaveli
@@ -72,5 +74,40 @@ public class Informe {
         */ 
         return i;
     }
-    
+        public static Informe nuevoInforme () throws ParseException{
+  
+        Informe i = Informe.nuevoInforme();
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        
+        do{
+            
+            
+            
+            System.out.println("Introduzca descripción del tratamiento:");
+            String dtrat = in.nextLine();
+            // i.setDescripcionTratamiento(dtrat);
+            
+            ArrayList <Secretariado> secretariados = new ArrayList();
+            System.out.println("¿Quieres introducir los secretarios? ");
+            boolean resp = Utilidades.leerBoleano();
+            if(resp){
+               boolean resp2;
+                do {
+                   Secretariado s = Secretariado.nuevoSecretariado();
+                   secretariados.add(s);
+                   System.out.println("¿Quiere introducir otro secretariado/a?");
+                   resp2 =Utilidades.leerBoleano();
+                }
+                while(resp2);    
+                i.setSecretariados (secretariados);
+            }
+            System.out.println("El informe introducido es: " + i);
+            System.out.println("¿Es correcto el informe?");
+            correcto = Utilidades.leerBoleano();
+        }
+        while(!correcto);
+        
+     return i;   
+    }  
 }
