@@ -95,8 +95,8 @@ public class Intervencion extends Cita{
             i = new Intervencion();
             
             System.out.println("Introduzca duración:");
-             String dur = in.nextLine();
-            // i.setDuracion(dur);
+            String dur = in.nextLine();
+            i.setDuracion(dur);
             
             ArrayList <Enfermeria> enfermeros = new ArrayList();
             System.out.println("¿Quieres introducir los enfermeros? ");
