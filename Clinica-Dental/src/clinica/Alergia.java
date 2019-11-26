@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 3.1
  * @author AdrianSaveli
@@ -14,6 +16,14 @@ public class Alergia {
     private String nombreAlergia;//Es el nombre de la alergia.Cadena de caracteres.
     private ArrayList<Historial> historiales;
     //Getters y setters
+
+    public ArrayList<Historial> getHistoriales() {
+        return historiales;
+    }
+
+    public void setHistoriales(ArrayList<Historial> historiales) {
+        this.historiales = historiales;
+    }
     
     public long getID() {
         return id;
@@ -66,4 +76,37 @@ public class Alergia {
         */ 
         return a;
     }
+        public static Alergia nuevaAlergia () throws ParseException{
+  
+        Alergia a = new Alergia();
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        
+        do{
+            System.out.println("Introduzca el nombre de la alergia:");
+             String nombre = in.nextLine();
+            // i.setNombreAlergia(noma);
+            
+            ArrayList <Historial> historiales = new ArrayList();
+            System.out.println("¿Quieres introducir los historiales que padezcan esta alergia? ");
+            boolean resp = Utilidades.leerBoleano();
+            if(resp){
+               boolean resp2;
+                do {
+                   Historial h = Historial.nuevoHistorial();
+                   historiales.add(h);
+                   System.out.println("¿Quiere introducir otro historial?");
+                   resp2 =Utilidades.leerBoleano();
+                }
+                while(resp2);
+                a.setHistoriales (historiales);
+            }
+            System.out.println("La alergia introducida es: " + a);
+            System.out.println("¿Es correcta la alergia?");
+            correcto = Utilidades.leerBoleano();
+        }
+        while(!correcto);
+        
+     return a;   
+    }   
 }
