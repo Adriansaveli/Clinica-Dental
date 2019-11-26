@@ -25,7 +25,7 @@ public class Paciente {
     private String NIF;//Es la tarjeta de identidad del paciente.Cadena de caracteres.
     private String telefono;//Es el telefono de contacto del paciente.Cadena de caracteres.
     private String direccion;//Es la dirección de residencia del paciente.Cadena de caracteres.
-    private ArrayList<Pago> pagos; //*Lista de pagos.
+    
     
 
     
@@ -80,13 +80,6 @@ public class Paciente {
         this.direccion = direccion;
     }
 
-    public ArrayList<Pago> getPagos() {
-        return pagos;
-    }
-
-    public void setPagos(ArrayList<Pago> pagos) {
-        this.pagos = pagos;
-    }
    
     //Constructor por defecto
     public Paciente() {
