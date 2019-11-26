@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Paciente {
     
-    Tratamiento tratamiento;
+    
     
     Historial historial;
     
@@ -142,13 +142,26 @@ public class Paciente {
     public Paciente nuevoPaciente (){
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);
-        
-        String n,a,ni,t,d;
+        boolean correcto;
+        String nom,ape,nif,tel,dir;
         System.out.println("Dame el nombre:");
-        n=in.nextLine();
-        p.setNombre(n);
+        nom=in.nextLine();
+        p.setNombre(nom);
+        System.out.println("Dame el apellido:");
+        ape=in.nextLine();
+        p.setApellidos(ape);
+        System.out.println("Dame el NIF:");
+        nif=in.nextLine();
+        p.setNIF(nif);
+        System.out.println("Dame el telefono:");
+        tel=in.nextLine();
+        p.setTelefono(tel);
+        System.out.println("Dame la dirección:");
+        dir=in.nextLine();
+        p.setDireccion(dir);
+        System.out.println("¿Son correctos los datos del paciente?");
         
-        
+        correcto = Utilidades.leerBoleano();
         return p;
     }
 }

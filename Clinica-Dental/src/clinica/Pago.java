@@ -16,7 +16,7 @@ public class Pago {
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
     private String métododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
-   
+    Paciente paciente;//Paciente es el que realiza el pago.
     //Getters y setters
     
     public long getID() {

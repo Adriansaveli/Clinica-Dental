@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Tratamiento {
  
     Informe informe;
-    
+    Paciente paciente;
     Cobro cobro;
     
     protected long id;
