@@ -142,7 +142,9 @@ public class Paciente {
     public Paciente nuevoPaciente (){
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);
+        
         boolean correcto;
+        do{
         String nom,ape,nif,tel,dir;
         System.out.println("Dame el nombre:");
         nom=in.nextLine();
@@ -162,6 +164,8 @@ public class Paciente {
         System.out.println("¿Son correctos los datos del paciente?");
         
         correcto = Utilidades.leerBoleano();
+        }
+        while (!correcto);
         return p;
     }
 }
