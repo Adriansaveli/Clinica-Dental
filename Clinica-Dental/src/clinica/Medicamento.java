@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -105,7 +106,7 @@ public class Medicamento {
     }
     
     
-    public static Medicamento nuevoMedicamento(){
+    public static Medicamento nuevoMedicamento() throws ParseException{
         
         Medicamento m = new Medicamento();
         Scanner in = new Scanner (System.in);
@@ -115,7 +116,7 @@ public class Medicamento {
             //*nombre principioActivo DosisMaxDairia
             System.out.println("Introduzca el nombre del medicamento:");
             String nmed = in.nextLine();
-            m.setNombre (med);
+            m.setNombre (nmed);
             
             System.out.println("Introduzca el principio activo del medicamento: ");
             String prina = in.nextLine();
@@ -141,7 +142,7 @@ public class Medicamento {
                 m.setCita (citas);
             }
             
-            Alergia alergias = nuevoAlergia();
+            Alergia alergia = Alergia.nuevaAlergia();
            //* System.out.println("Introduzca la alergia: ");
            //* String aler = in.nextLine();
             //*m.setAlergia(aler);

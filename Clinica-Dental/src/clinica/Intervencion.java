@@ -18,6 +18,8 @@ public class Intervencion extends Cita{
     
     private ArrayList <Enfermeria> enfermeros;
     
+    private ArrayList <Cirujano> cirujanos;
+    
     public Intervencion() {
     super();
     }
@@ -58,6 +60,14 @@ public class Intervencion extends Cita{
 
     public void setEnfermeros(ArrayList<Enfermeria> enfermeros) {
         this.enfermeros = enfermeros;
+    }
+
+    public ArrayList<Cirujano> getCirujanos() {
+        return cirujanos;
+    }
+
+    public void setCirujanos(ArrayList<Cirujano> cirujanos) {
+        this.cirujanos = cirujanos;
     }
    
 
@@ -112,7 +122,24 @@ public class Intervencion extends Cita{
                 while(resp2);    
                 i.setEnfermeros (enfermeros);
             }
-           i= new Intervencion(c, dur, enfermeros);
+            
+            ArrayList <Cirujano> cirujanos = new ArrayList();
+            System.out.println("¿Quieres introducir los ? ");
+            Cirujano cij;
+            boolean resp3 = Utilidades.leerBoleano();
+            if(resp3){
+               boolean resp4;
+                do {
+                   
+                   cij = Cirujano.nuevoCirujanos();
+                   cirujanos.add(cij);
+                   System.out.println("¿Quiere introducir otro cirujano/a?");
+                   resp4 =Utilidades.leerBoleano();
+                }
+                while(resp4);    
+                i.setCirujanos (cirujanos);
+            }
+           //* i= new Intervencion(c, dur, enfermeros, cij);
             System.out.println("La intervencion introducida es: " + i);
             System.out.println("¿Es correcta la intervencion?");
             correcto = Utilidades.leerBoleano();
