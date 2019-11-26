@@ -48,6 +48,7 @@ public class Revision extends Cita {
     public String toString() {
         return super.toString()+"Revisi\u00f3n{" + "anotaciones=" + anotaciones + '}';
     }
+    
     public String data() {
         
         return super.data()+ "|"+getAnotaciones();
@@ -68,5 +69,29 @@ public class Revision extends Cita {
     */    
         return r;
     }
+    public static Revision nuevaRevision () throws ParseException{
+  
+        Revision r;
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        
+        do{
+            Cita c = Cita.nuevoCita();
+            r = new Revision();
+            
+            System.out.println("Introduzca anotaciones:");
+             String anot = in.nextLine();
+            // r.setAnotaciones(anot);
+            
+           
+           r= new Revision(c, anot);
+            System.out.println("La revision introducida es: " + r);
+            System.out.println("¿Es correcta la revision?");
+            correcto = Utilidades.leerBoleano();
+        }
+        while(!correcto);
+        
+     return r;   
+    } 
     
 }
