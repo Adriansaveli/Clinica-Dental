@@ -5,6 +5,7 @@
  */
 package clinica;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * version 2
  * @author DAW109
@@ -23,7 +24,8 @@ public class Tratamiento {
     //Fecha de inicio del tratamiento pueden ser tratamientos de semanas... TIENE QUE TENER FORMATO DIA/MES/AÑO
     private boolean consentimiento;
     // Consentimiento del paciente al ser solo acepto o no se pone un boolean, OLO SE ACEPTAN VALORES DE VERDADERO (ACEPTA Y FALSO (NO ACEPTA)
-
+    private ArrayList <Cita> citas;
+    
     public Tratamiento() {
     }
 
@@ -97,6 +99,51 @@ public class Tratamiento {
          return t;
     }
  
+    public static Tratamiento nuevoTratamiento(){
+            Tratamiento t = new Tratamiento();
+            Scanner in = new Scanner(System.in);
+            
+            boolean correcto;
+            
+            do{
+            
+           System.out.println("Introduzca el nombre del paciente:");
+           String nom = in.nextLine();
+           t.setNombre(nom);
+           
+           System.out.println("Introduzca la fecha de inicio del tratammiento");
+           String fin =in.nextLine();
+           t.setFechaInicio(fin);
+           
+           System.out.println(" ¿El paciente da el consentimiento?");
+           char consentimiento;
+           boolean consen = Utilidades.leerBoleano();
+           
+           if(consen){
+               
+               boolean consen2;
+           
+             do {
+                
+                System.out.println("Es necesario el consentimiento para realizar un tratamiento");
+                consentimiento = in.nextLine().charAt(0);
+                consen2 = Utilidades.leerBoleano();
+                
+            } while (!consen2);
+             
+             t.setConsentimiento(consen);
+
+           }
+              
+                System.out.println("Los datos introducidos son: "+t);
+                System.out.println("¿Son correctos los datos introducidos?");
+                correcto = Utilidades.leerBoleano();
+    
+     }    while (!correcto);
+
+    return t;
+}
     
 }
+
 

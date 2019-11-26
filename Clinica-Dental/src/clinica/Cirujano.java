@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Cirujano extends Empleado{
    
-    private String especialidades;//Esto deberia implementarse en un lista de Especialidad. 
+    private ArrayList <Especialidad> especialidades;//Esto deberia implementarse en un lista de Especialidad. 
     private ArrayList<Revision> revisiones;
     public Cirujano() {
         super();
@@ -28,7 +28,7 @@ public class Cirujano extends Empleado{
         this.especialidades=c.getEspecialidades();
        
     }
-    public Cirujano(Empleado e, String especialidades) {
+    public Cirujano(Empleado e, ArrayList especialidades) {
         super(e);
         this.especialidades= especialidades;
              
@@ -45,13 +45,13 @@ public class Cirujano extends Empleado{
     /*
     Getter de especialidades.
     */
-    public String getEspecialidades() {
+    public ArrayList<Especialidad> getEspecialidades() {
         return especialidades;
     }
     /*
     Setter de especialidades.
     */
-    public void setEspecialidades(String especialidades) {
+    public void setEspecialidades(ArrayList especialidades) {
         this.especialidades = especialidades;
     }
     /*
@@ -79,8 +79,8 @@ public class Cirujano extends Empleado{
          return c;
     }
     public static Cirujano nuevoCirujano(){
-       Cirujano ci = new Cirujano();
+       Cirujano c = new Cirujano();
       
-      return ci;
+      return c;
   }
 }
