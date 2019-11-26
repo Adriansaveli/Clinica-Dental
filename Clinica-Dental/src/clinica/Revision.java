@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 2.0
  * @author AdrianSaveli
@@ -66,4 +68,5 @@ public class Revision extends Cita {
     */    
         return r;
     }
+    
 }
