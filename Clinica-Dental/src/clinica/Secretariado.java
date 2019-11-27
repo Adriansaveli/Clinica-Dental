@@ -109,7 +109,7 @@ public class Secretariado extends Empleado{
                 while(resp2);    
                 s.setInformes (informes);
             }
-            s = new Secretariado(e,ae, informes);
+            s = new Secretariados(e,ae, informes);
             System.out.println("El secretariado introducido es: " + s);
             System.out.println("¿Son correctos los datos del secreatriado?");
             correcto = Utilidades.leerBoleano();
@@ -118,6 +118,12 @@ public class Secretariado extends Empleado{
         
      return s;   
     } 
+
+    private static class Secretariados extends Secretariado {
+
+        public Secretariados(Empleado e, String ae, ArrayList<Informe> informes) {
+        }
+    }
     
      
     
