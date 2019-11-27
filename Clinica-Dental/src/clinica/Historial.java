@@ -6,6 +6,7 @@
  */
 package clinica;
 import java.util.ArrayList;
+import java.util.Scanner;
 //import java.util.*;
 /**
  * @version 2.0
@@ -72,10 +73,45 @@ public class Historial {
         Historial h = new Historial();
          return h;
     }
-      public static Historial nuevoHistorial(){
-       Historial h = new Historial();
-      
-      return h;
-  }
+          public static Historial nuevoHistorial()
+     {
+        Historial h = new Historial();
+        Scanner in = new Scanner(System.in);     
+        
+        System.out.println("Introduzca la descripcion");
+        String descripcion = in.nextLine();
+        h.setDescripcion(descripcion);
+        
+        System.out.println("Introduzca nº de alergias");
+        int num = Integer.parseInt(in.nextLine());
+        
+        ArrayList<Alergia>ale=new ArrayList<Alergia>();
+        
+        for (int i=0; i<num;i++){
+        
+        System.out.println("Introduce alergia");
+        String al= in.nextLine();
+        
+        Alergia a= new Alergia(i+1,al);
+        ale.add(a);
+        }
+        
+        h.setAlergias (ale);
+        
+        System.out.println("Lista alergias");
+        h.getAlergias();
+        
+        ArrayList<Alergia>alerg=h.getAlergias();
+        
+        for (int i=0; i<alerg.size();i++){
+        
+        System.out.println(alerg.get(i).getNombreAlergia());
+        
+        }
+        
+        return h;
+
+     }
+    
 }
 

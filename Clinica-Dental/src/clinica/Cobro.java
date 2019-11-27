@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 2.0
  * @author DAW106
@@ -81,4 +83,46 @@ public class Cobro {
         Cobro c = new Cobro();
         return c;
     }
-}
+    
+   public static Cobro nuevoCobro () throws ParseException{
+       
+    Cobro c = new Cobro();
+    Scanner in = new Scanner(System.in);
+       
+    boolean correcto = false;
+    do {
+            
+    //**importe total euros, fecha arraypagos        
+         
+    System.out.println("Importe total en euros: ");
+    double importeTotalEuros = in.nextDouble();
+    c.setFechaFinalizacion();
+            
+    System.out.println("Introduzca la fecha de finalizacion: ");
+    Date fecha = Utilidades.leerFecha();
+    c.setFechaFinalizacion();        
+            
+    ArrayList <Pago> pagos = new ArrayList();
+    System.out.println("¿Cuantos pagos realizara? ");
+    int num = Integer.parseInt(in.nextLine());
+    for (int i=0; i<num;i++){
+        
+        System.out.println("Introduce numero de pagos");
+        String cob= in.nextLine();
+        
+        //Pago p= Pago nuevoPagos(i+1,cob);
+        //pagos.add(p);
+        }
+    
+        }
+    while (!correcto);
+    return c;
+        }
+
+    private void setFechaFinalizacion() {
+           }
+       
+       
+       
+   }
+   

@@ -11,6 +11,10 @@ import java.util.ArrayList;
  * @author AdrianSaveli
  */
 public class Pago {
+
+    static Pago nuevoPagos(int i, String cob) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     protected long id;//Es el identificador del pago.
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
