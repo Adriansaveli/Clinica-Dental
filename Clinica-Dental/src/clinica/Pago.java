@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 3.1
  * @author AdrianSaveli
@@ -19,7 +21,7 @@ public class Pago {
     protected long id;//Es el identificador del pago.
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
-    private String métododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
+    private String metododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
     Paciente paciente;//Paciente es el que realiza el pago.
     //Getters y setters
     
@@ -47,41 +49,49 @@ public class Pago {
         this.importe = importe;
     }
 
-    public String getMétodoDePago() {
-        return métododePago;
+    public String getMetodoDePago() {
+        return metododePago;
     }
 
-    public void setMétodoDePago(String métodoDePago) {
-        this.métododePago = métodoDePago;
+    public void setMetodoDePago(String métodoDePago) {
+        this.metododePago = métodoDePago;
     }
 
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+    
    //Constructor por defecto
     public Pago() {
     }
     //Constructor con argumentos
-    public Pago(long ID, Date FechaDePago, int Importe, String MétodoDePago) {
+    public Pago(long ID, Date FechaDePago, int Importe, String MetodoDePago) {
         this.id = ID;
         this.fechadePago = FechaDePago;
         this.importe = Importe;
-        this.métododePago = MétodoDePago;
+        this.metododePago = MetodoDePago;
     }
     //Constructor de copia
       public Pago (Pago p) {
         this.id = p.getID();
         this.fechadePago = p.getFechaDePago();
         this.importe = p.getImporte();
-        this.métododePago = p.getMétodoDePago();
+        this.metododePago = p.getMetodoDePago();
         
         
         }
 
     @Override
     public String toString() {
-        return "Pago{" + "ID=" + id + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métododePago + '}';
+        return "Pago{" + "ID=" + id + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + metododePago + '}';
     }
     
     public String data() {
-        return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMétodoDePago();
+        return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMetodoDePago();
     }
     
     
@@ -99,4 +109,34 @@ public class Pago {
         */ 
         return p;
     }
+    public static Pago nuevoPago() throws ParseException {
+        Pago p = new Pago();
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        do {
+
+            System.out.println("Introduzca la fecha del pago: ");
+            Date fecha = Utilidades.leerFecha();
+            p.setFechaDePago(fecha);
+
+            System.out.println("Introduzca el importe del pago:");
+            double imp;
+            imp = in.nextInt();
+
+            System.out.println("Introduzca el método de pago: ");
+            String metp = in.nextLine();
+            p.setMetodoDePago(metp);
+
+            
+            
+            System.out.println("La pago introducido es: " + p);
+            System.out.println("¿Es correcto el pago?");
+            correcto = Utilidades.leerBoleano();
+
+        } while (!correcto);
+
+        return p;
+    }
+
+
 }

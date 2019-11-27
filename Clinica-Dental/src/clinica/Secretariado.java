@@ -53,6 +53,10 @@ public class Secretariado extends Empleado{
         super (e);
         this.añosExperiencia= añosExperiencia;
     }
+    public Secretariado (Empleado e, int añosExperiencia,ArrayList<Informe>informes) {
+        super (e);
+        this.añosExperiencia= añosExperiencia;
+    }
     //Otros métodos sobreescritos
     @Override
     public String toString() {
@@ -92,7 +96,7 @@ public class Secretariado extends Empleado{
             s = new Secretariado();
             
             System.out.println("Introduzca los años de experiencia:");
-            String ae = in.nextLine();
+            int ae = in.nextInt();
             // i.setDuracion(ae);
             
             ArrayList <Informe> informes = new ArrayList();
@@ -109,7 +113,7 @@ public class Secretariado extends Empleado{
                 while(resp2);    
                 s.setInformes (informes);
             }
-            s = new Secretariados(e,ae, informes);
+            s = new Secretariado(e,ae, informes);
             System.out.println("El secretariado introducido es: " + s);
             System.out.println("¿Son correctos los datos del secreatriado?");
             correcto = Utilidades.leerBoleano();
@@ -118,12 +122,6 @@ public class Secretariado extends Empleado{
         
      return s;   
     } 
-
-    private static class Secretariados extends Secretariado {
-
-        public Secretariados(Empleado e, String ae, ArrayList<Informe> informes) {
-        }
-    }
     
      
     
