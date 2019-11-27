@@ -5,6 +5,7 @@
  */
 package clinica;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * verison 2
  * @author DAW109
@@ -75,7 +76,21 @@ public class Especialidad {
     public Especialidad getEspecilidadById (long id){
         
         Especialidad e = new Especialidad();
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
         
-        return e;
+        do{
+            
+            System.out.println("Inserte el nombre de la especialidad:");
+            String esp = in.nextLine();
+            e.setNombre(esp);
+            
+            System.out.println("¿Es correcto el nombre de la especialidad?");
+            correcto = Utilidades.leerBoleano();
+            
+        } while (!correcto);
+                                                
+
+      return e;  
     }
 }

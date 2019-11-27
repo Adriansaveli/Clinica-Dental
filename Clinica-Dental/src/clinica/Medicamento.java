@@ -81,6 +81,14 @@ public class Medicamento {
     public void setCitas(ArrayList<Cita> citas) {
         this.citas = citas;
     }
+
+    public Alergia getAlergia() {
+        return alergia;
+    }
+
+    public void setAlergia(Alergia alergia) {
+        this.alergia = alergia;
+    }
     
    
 
@@ -142,10 +150,10 @@ public class Medicamento {
                 m.setCita (citas);
             }
             
+            System.out.println("Introduzca la alergia: ");
             Alergia alergia = Alergia.nuevaAlergia();
-           //* System.out.println("Introduzca la alergia: ");
-           //* String aler = in.nextLine();
-            //*m.setAlergia(aler);
+            String aler = in.nextLine();
+            m.setAlergia(alergia);
             
             System.out.println("Los datos introducidos son: "+m);
             System.out.println("¿Son correctos los datos introducidos?");
@@ -165,7 +173,5 @@ public class Medicamento {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void setAlergia(String aler) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
