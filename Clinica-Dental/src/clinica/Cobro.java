@@ -110,8 +110,8 @@ public class Cobro {
         System.out.println("Introduce numero de pagos");
         String cob= in.nextLine();
         
-        //Pago p= Pago nuevoPagos(i+1,cob);
-        //pagos.add(p);
+        Pago p = Pago.nuevoPago();
+        pagos.add(p);
         }
     
         }
