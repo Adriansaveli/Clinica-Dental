@@ -17,7 +17,7 @@ public class Pago {
     protected long id;//Es el identificador del pago.
     private Date fechadePago;//Es la fecha de la realización del pago por parte del paciente.
     private double importe ;//Es el importe del pago.Solo son valores númericos.
-    private String métododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
+    private String metododePago;//Es el método por el cual se efectua el pago (Transferencia,efectivo,...).
     Paciente paciente;//Paciente es el que realiza el pago.
     //Getters y setters
     
@@ -45,12 +45,12 @@ public class Pago {
         this.importe = importe;
     }
 
-    public String getMétodoDePago() {
-        return métododePago;
+    public String getMetodoDePago() {
+        return metododePago;
     }
 
-    public void setMétodoDePago(String métodoDePago) {
-        this.métododePago = métodoDePago;
+    public void setMetodoDePago(String métodoDePago) {
+        this.metododePago = métodoDePago;
     }
 
     public Paciente getPaciente() {
@@ -65,29 +65,29 @@ public class Pago {
     public Pago() {
     }
     //Constructor con argumentos
-    public Pago(long ID, Date FechaDePago, int Importe, String MétodoDePago) {
+    public Pago(long ID, Date FechaDePago, int Importe, String MetodoDePago) {
         this.id = ID;
         this.fechadePago = FechaDePago;
         this.importe = Importe;
-        this.métododePago = MétodoDePago;
+        this.metododePago = MetodoDePago;
     }
     //Constructor de copia
       public Pago (Pago p) {
         this.id = p.getID();
         this.fechadePago = p.getFechaDePago();
         this.importe = p.getImporte();
-        this.métododePago = p.getMétodoDePago();
+        this.metododePago = p.getMetodoDePago();
         
         
         }
 
     @Override
     public String toString() {
-        return "Pago{" + "ID=" + id + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + métododePago + '}';
+        return "Pago{" + "ID=" + id + ", fechaDePago=" + fechadePago + ", importe=" + importe + ", m\u00e9todoDePago=" + metododePago + '}';
     }
     
     public String data() {
-        return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMétodoDePago();
+        return ""+getID()+"|"+getFechaDePago()+"|"+getImporte()+"|"+getMetodoDePago();
     }
     
     
@@ -113,14 +113,15 @@ public class Pago {
 
             System.out.println("Introduzca la fecha del pago: ");
             Date fecha = Utilidades.leerFecha();
-            p.setFecha(fecha);
+            p.setFechaDePago(fecha);
 
             System.out.println("Introduzca el importe del pago:");
-            int imp = in.nextInt();
+            double imp;
+            imp = in.nextInt();
 
             System.out.println("Introduzca el método de pago: ");
             String metp = in.nextLine();
-            p.setHora(metp);
+            p.setMetodoDePago(metp);
 
             
             
@@ -133,11 +134,5 @@ public class Pago {
         return p;
     }
 
-    private void setFecha(Date fecha) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
-    private void setHora(String metp) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
