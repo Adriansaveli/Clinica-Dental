@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 3.1
  * @author AdrianSaveli
@@ -51,6 +53,14 @@ public class Pago {
         this.métododePago = métodoDePago;
     }
 
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+    
    //Constructor por defecto
     public Pago() {
     }
@@ -94,5 +104,40 @@ public class Pago {
         Aunque si no existe ningún pago con ese id saldra null.  
         */ 
         return p;
+    }
+    public static Pago nuevoPago() throws ParseException {
+        Pago p = new Pago();
+        Scanner in = new Scanner(System.in);
+        boolean correcto;
+        do {
+
+            System.out.println("Introduzca la fecha del pago: ");
+            Date fecha = Utilidades.leerFecha();
+            p.setFecha(fecha);
+
+            System.out.println("Introduzca el importe del pago:");
+            int imp = in.nextInt();
+
+            System.out.println("Introduzca el método de pago: ");
+            String metp = in.nextLine();
+            p.setHora(metp);
+
+            
+            
+            System.out.println("La pago introducido es: " + p);
+            System.out.println("¿Es correcto el pago?");
+            correcto = Utilidades.leerBoleano();
+
+        } while (!correcto);
+
+        return p;
+    }
+
+    private void setFecha(Date fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void setHora(String metp) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
