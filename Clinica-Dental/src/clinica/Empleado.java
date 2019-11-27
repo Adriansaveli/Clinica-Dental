@@ -5,6 +5,7 @@
  */
 package clinica;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 1.0
  * @author DAW106
@@ -118,9 +119,44 @@ public class Empleado{
         Empleado e = new Empleado();
          return e;
     }
-      public static Empleado nuevoEmpleado(){
-       Empleado e = new Empleado();
-      
-      return e;
-  }
+            public static Empleado nuevoEmpleado(){
+     
+        Empleado em = new Empleado();
+        Scanner in = new Scanner(System.in);  
+        
+        boolean correcto;
+        
+        do{
+        
+        System.out.println("Introduzca el Nombre del empleado");
+        String nombre = in.nextLine();
+        em.setNombre(nombre);
+        
+        System.out.println("Introduzca el Apellido del empleado");
+        String apellido = in.nextLine();
+        em.setApellido(apellido);
+        
+        
+        System.out.println("Introduzca el Telefono del empleado");
+        String telefono = in.nextLine();
+        em.setTelefono(telefono);
+        
+        System.out.println("Introduzca el NIF del empleado");
+        String nif = in.nextLine();
+        em.setNif(nif);
+        
+        System.out.println("Introduzca el Direccion del empleado");
+        String direccion = in.nextLine();
+        em.setDireccion(direccion);
+        
+        System.out.println("Estos son los datos del empleado:"+em);
+        System.out.println("¿Los datos del empleado son correctos?");
+        String correct = in.nextLine();
+        correcto = Utilidades.leerBoleano();
+        }
+        while(!correcto);
+        
+        return em;
+
+     }
 }
