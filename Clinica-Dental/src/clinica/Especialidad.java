@@ -74,6 +74,14 @@ public class Especialidad {
 
     
     public Especialidad getEspecilidadById (long id){
+        Especialidad e =new Especialidad();
+        
+        return e;
+    }
+    
+        
+        
+        public static Especialidad nuevaEspecialidad(){
         
         Especialidad e = new Especialidad();
         Scanner in = new Scanner(System.in);

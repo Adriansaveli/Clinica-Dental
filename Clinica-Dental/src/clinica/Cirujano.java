@@ -84,9 +84,11 @@ public class Cirujano extends Empleado{
     Cirujano c = new Cirujano();
     Scanner in = new Scanner(System.in);  
         
-    boolean correcto = false;
+    boolean correcto;
         
         do{
+            
+            Empleado em = Empleado.nuevoEmpleado();
             
     ArrayList <Especialidad> especialidad = new ArrayList();
             System.out.println("¿Quieres introducir la especialidad? ");
@@ -95,8 +97,8 @@ public class Cirujano extends Empleado{
                boolean resp2;
                 do {
                    Especialidad e;
-                  // e = Especialidad.nuevoEspecialidad();
-                   //especialidad.add(e);
+                   e = Especialidad.nuevaEspecialidad();
+                   especialidad.add(e);
                    System.out.println("¿Quiere introducir otra especialidad?");
                    resp2 =Utilidades.leerBoleano();
                 }
@@ -104,7 +106,7 @@ public class Cirujano extends Empleado{
                 c.setEspecialidad (especialidad);
             }
             ArrayList <Revision> revision = new ArrayList();
-            System.out.println("¿Quiere introducir la ");
+            System.out.println("¿Quiere introducir las revisiones? ");
             Revision rev;
             boolean resp3 = Utilidades.leerBoleano();
             if(resp3){
@@ -119,6 +121,10 @@ public class Cirujano extends Empleado{
                 while(resp4);    
                 c.setRevisiones (revision);
             }
+            
+            System.out.println("Los datos introducidos son:"+c);
+            System.out.println("¿Los datos son correctos?");
+            correcto= Utilidades.leerBoleano();
         }
          while(!correcto);
       return c;
