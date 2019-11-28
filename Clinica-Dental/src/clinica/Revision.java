@@ -13,6 +13,10 @@ import java.util.Scanner;
  * @author AdrianSaveli
  */
 public class Revision extends Cita {
+
+    static Revision nuevoRevision() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     private String anotaciones;
     //Son las anotaciones que se escriben en la revisión.Cadena de caracteres.
     

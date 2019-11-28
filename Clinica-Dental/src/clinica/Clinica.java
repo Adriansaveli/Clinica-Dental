@@ -41,8 +41,8 @@ public class Clinica {
         
        //* System.out.println(cir1.data());
        //* System.out.println(cir1.toString());
-        Cita cita = Cita.nuevoCita();
-        Pago pago = Pago.nuevoPago();
+        //Cita cita = Cita.nuevoCita();
+        //Pago pago = Pago.nuevoPago();
     }
     
 }
