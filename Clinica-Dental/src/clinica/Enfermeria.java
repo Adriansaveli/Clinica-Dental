@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -78,15 +79,48 @@ public class Enfermeria extends Empleado{
               
   }
   
-  public static Enfermeria nuevoEnfermeria(){
+  public static Enfermeria nuevoEnfermeria() throws ParseException{
        Enfermeria e = new Enfermeria();
        Scanner in = new Scanner (System.in);
        boolean correcto;
        
-       
-       
-      return e;
-  }
+       do {
+           
+           Empleado em = Empleado.nuevoEmpleado();
+           
+           System.out.println("Introduzca la categoria de los enfermeros/as.");
+           char cat;
+           cat = in.nextLine().charAt(0);
+           e.setCategoria(cat);
+           
+           ArrayList <Intervencion> intervenciones = new ArrayList();
+           System.out.println("¿Quiere introducir las intervenciones?");
+           Intervencion intr;
+           
+           boolean resp = Utilidades.leerBoleano();
+           
+           if(resp){
+               
+               boolean resp2;
+           do{
+               
+               intr = Intervencion.nuevaIntervencion();
+               intervenciones.add(intr);
+               System.out.println("¿Quiere introducir otra intervención?");
+               resp2 = Utilidades.leerBoleano();
+               
+           } while (resp2);
+          
+                   }
+           System.out.println("Los datos introducidos son:"+e);
+           System.out.println("¿Son correctos los datos introducidos?");
+           correcto = Utilidades.leerBoleano();
+      
+  } while (!correcto);
     
-    
+    return e;
 }
+  
+  
+}
+

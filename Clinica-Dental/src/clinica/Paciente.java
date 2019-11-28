@@ -132,7 +132,7 @@ public class Paciente {
     }
     
     
-    public Paciente nuevoPaciente (){
+    public static Paciente nuevoPaciente (){
         Paciente p = new Paciente();
         Scanner in= new Scanner(System.in);
         

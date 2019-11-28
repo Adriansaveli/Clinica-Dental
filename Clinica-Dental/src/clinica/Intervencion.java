@@ -27,15 +27,22 @@ public class Intervencion extends Cita{
     public Intervencion(Date fecha, char rangoHorario,String hora,boolean estado,String duracion){
         super(fecha,rangoHorario,hora,estado);
         this.duracion = duracion;
+       this.enfermeros = new ArrayList<Enfermeria>();
+       this.cirujanos = new ArrayList<Cirujano>();
     }
+    
     public Intervencion (Intervencion i) {
         super(i);
         this.duracion = i.getDuracion();
+        this.enfermeros = new ArrayList<Enfermeria>();
+        this.cirujanos = new ArrayList<Cirujano>();
     }
+    
     public Intervencion(Cita c, String duracion){
        super(c);
        this.duracion = duracion;
        this.enfermeros = new ArrayList<Enfermeria>();
+       this.cirujanos = new ArrayList<Cirujano>();
        
    } 
     
@@ -46,6 +53,15 @@ public class Intervencion extends Cita{
        
    }
     
+   
+      public Intervencion(Cita c, String duracion, ArrayList<Enfermeria> enfermeros, ArrayList<Cirujano> cirujanos){
+       super(c);
+       this.duracion = duracion;
+       this.enfermeros = enfermeros;
+       this.cirujanos = cirujanos;
+       
+   }
+   
     public String getDuracion() {
         return duracion;
     }
@@ -139,7 +155,7 @@ public class Intervencion extends Cita{
                 while(resp4);    
                 i.setCirujanos (cirujanos);
             }
-           //* i= new Intervencion(c, dur, enfermeros, cij);
+            i= new Intervencion(c, dur, enfermeros, cirujanos);
             System.out.println("La intervencion introducida es: " + i);
             System.out.println("¿Es correcta la intervencion?");
             correcto = Utilidades.leerBoleano();

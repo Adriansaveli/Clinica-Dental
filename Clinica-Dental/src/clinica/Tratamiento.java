@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -80,6 +81,42 @@ public class Tratamiento {
         this.consentimiento = consentimiento;
     }
 
+    public Informe getInforme() {
+        return informe;
+    }
+
+    public void setInforme(Informe informe) {
+        this.informe = informe;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public Cobro getCobro() {
+        return cobro;
+    }
+
+    public void setCobro(Cobro cobro) {
+        this.cobro = cobro;
+    }
+
+    public ArrayList<Cita> getCitas() {
+        return citas;
+    }
+
+    public void setCitas(ArrayList<Cita> citas) {
+        this.citas = citas;
+    }
+
+    
+    
+    
+    
     @Override
     public String toString() {
         return "Tratamiento{" + "idTratamiento=" + id + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", consentimiento=" + consentimiento + '}';
@@ -99,7 +136,7 @@ public class Tratamiento {
          return t;
     }
  
-    public static Tratamiento nuevoTratamiento(){
+    public static Tratamiento nuevoTratamiento() throws ParseException{
             Tratamiento t = new Tratamiento();
             Scanner in = new Scanner(System.in);
             
@@ -107,7 +144,17 @@ public class Tratamiento {
             
             do{
             
-           System.out.println("Introduzca el nombre del paciente:");
+            System.out.println("Introduzca el paciente: ");
+            Paciente paciente = Paciente.nuevoPaciente();
+            String Paciente = in.nextLine();
+            t.setPaciente(paciente);
+            
+            System.out.println("Introduzca el informe:");
+            Informe informe = Informe.nuevoInforme();
+            String Informe = in.nextLine();
+            t.setInforme(informe);
+        
+           System.out.println("Introduzca el nombre del tratamiento:");
            String nom = in.nextLine();
            t.setNombre(nom);
            
@@ -134,6 +181,12 @@ public class Tratamiento {
              t.setConsentimiento(consen);
 
            }
+           
+                System.out.println("Introduzca el cobro del tratamiento:");
+                Cobro cobro = Cobro.nuevoCobro();
+                String Cobro = in.nextLine();
+                t.setCobro(cobro);
+           
               
                 System.out.println("Los datos introducidos son: "+t);
                 System.out.println("¿Son correctos los datos introducidos?");
@@ -143,6 +196,10 @@ public class Tratamiento {
 
     return t;
 }
+
+    private void setPaciente(String paciente) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
 
