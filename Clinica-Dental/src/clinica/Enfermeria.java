@@ -5,6 +5,7 @@
  */
 package clinica;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * version 2
  * @author DAW109
@@ -79,7 +80,11 @@ public class Enfermeria extends Empleado{
   
   public static Enfermeria nuevoEnfermeria(){
        Enfermeria e = new Enfermeria();
-      
+       Scanner in = new Scanner (System.in);
+       boolean correcto;
+       
+       
+       
       return e;
   }
     
