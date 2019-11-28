@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package clinica;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * @version 2.0
  * @author DAW106
@@ -78,9 +80,51 @@ public class Cirujano extends Empleado{
         Cirujano c = new Cirujano();
          return c;
     }
-    public static Cirujano nuevoCirujanos(){
-       Cirujano c = new Cirujano();
-      
+    public static Cirujano nuevoCirujanos() throws ParseException{
+    Cirujano c = new Cirujano();
+    Scanner in = new Scanner(System.in);  
+        
+    boolean correcto = false;
+        
+        do{
+            
+    ArrayList <Especialidad> especialidad = new ArrayList();
+            System.out.println("¿Quieres introducir la especialidad? ");
+            boolean resp = Utilidades.leerBoleano();
+            if(resp){
+               boolean resp2;
+                do {
+                   Especialidad e;
+                  // e = Especialidad.nuevoEspecialidad();
+                   //especialidad.add(e);
+                   System.out.println("¿Quiere introducir otra especialidad?");
+                   resp2 =Utilidades.leerBoleano();
+                }
+                while(resp2);    
+                c.setEspecialidad (especialidad);
+            }
+            ArrayList <Revision> revision = new ArrayList();
+            System.out.println("¿Quiere introducir la ");
+            Revision rev;
+            boolean resp3 = Utilidades.leerBoleano();
+            if(resp3){
+               boolean resp4;
+                do {
+                   
+                   rev = Revision.nuevaRevision();
+                   revision.add(rev);
+                   System.out.println("¿Quiere introducir otra?");
+                   resp4 =Utilidades.leerBoleano();
+                }
+                while(resp4);    
+                c.setRevisiones (revision);
+            }
+        }
+         while(!correcto);
       return c;
   }
+
+    private void setEspecialidad(ArrayList<Especialidad> especialidad) {
+       
+    }
 }
