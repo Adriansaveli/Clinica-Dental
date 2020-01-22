@@ -43,5 +43,11 @@ public class Utilidades {
         }
         
     }
-    
+    public static final Paciente CLIENTES[] = {
+        new Paciente(1, "Luis", "Gijon Mondragon", "455566T", "942779900","C/Menor Mallorca 45667"),
+        new Paciente(2, "Ana", "Fervias Baixas", "764898U", "912331188","C/Ulises Huelva 32457"),
+        new Paciente(3, "Bruno", "Barcelona Puig", "899322T", "932432245","C/Mayor Bilbao 40899"),
+        new Paciente(4, "Carla", "Ramirez Dieguez", "0949384Z", "975073211", "C/Percebe Ourense 40978"),
+        new Paciente(5, "Ramona", "Perez Montoya", "223832Y", "942779900","C/Andorra Valencia 85627")
+    };
 }
